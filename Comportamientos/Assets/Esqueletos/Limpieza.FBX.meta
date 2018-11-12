@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: e055d413f9f813f47a9bdbdf812dc410
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arm_down_l
+    100002: arm_down_r
+    100004: arm_up_l
+    100006: arm_up_r
+    100008: Base
+    100010: Body
+    100012: bowtie
+    100014: Eye1
+    100016: Eye2
+    100018: eyebrow_l
+    100020: eyebrow_r
+    100022: Eyebrows 2
+    100024: foot_l
+    100026: foot_r
+    100028: hair
+    100030: Hair 3
+    100032: Hand1
+    100034: Hand2
+    100036: hand_l
+    100038: hand_r
+    100040: hat
+    100042: Head
+    100044: head
+    100046: ik_foot_l
+    100048: ik_foot_r
+    100050: leg_down_l
+    100052: leg_down_r
+    100054: leg_up_l
+    100056: leg_up_r
+    100058: //RootNode
+    100060: moustache
+    100062: Nose 2
+    100064: Pelvis
+    100066: root
+    100068: spine1
+    100070: spine2
+    100072: spine3
+    100074: spine4
+    100076: toe_l
+    100078: toe_r
+    100080: tophat
+    400000: arm_down_l
+    400002: arm_down_r
+    400004: arm_up_l
+    400006: arm_up_r
+    400008: Base
+    400010: Body
+    400012: bowtie
+    400014: Eye1
+    400016: Eye2
+    400018: eyebrow_l
+    400020: eyebrow_r
+    400022: Eyebrows 2
+    400024: foot_l
+    400026: foot_r
+    400028: hair
+    400030: Hair 3
+    400032: Hand1
+    400034: Hand2
+    400036: hand_l
+    400038: hand_r
+    400040: hat
+    400042: Head
+    400044: head
+    400046: ik_foot_l
+    400048: ik_foot_r
+    400050: leg_down_l
+    400052: leg_down_r
+    400054: leg_up_l
+    400056: leg_up_r
+    400058: //RootNode
+    400060: moustache
+    400062: Nose 2
+    400064: Pelvis
+    400066: root
+    400068: spine1
+    400070: spine2
+    400072: spine3
+    400074: spine4
+    400076: toe_l
+    400078: toe_r
+    400080: tophat
+    2100000: No Name
+    4300000: Head
+    4300002: Body
+    4300004: Eye1
+    4300006: Eye2
+    4300008: Hand1
+    4300010: Hand2
+    4300012: Nose 2
+    4300014: Eyebrows 2
+    4300016: Hair 3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Eye1
+    13700004: Eye2
+    13700006: Eyebrows 2
+    13700008: Hair 3
+    13700010: Hand1
+    13700012: Hand2
+    13700014: Head
+    13700016: Nose 2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

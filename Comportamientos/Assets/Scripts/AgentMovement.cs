@@ -19,7 +19,10 @@ namespace Assets.Scripts
         // Update is called once per frame
         void Update()
         {
-
+            //if(agent.desirableSpeed != 0)
+            //{
+                //anim.SetBoolMoving
+            //}
         }
 
         public void moveTo(Vector3 point)

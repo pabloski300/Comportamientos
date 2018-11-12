@@ -33,9 +33,9 @@ namespace Assets.Scripts
 
         enum SubState
         {
-            Idle,
             Moving,
-            Acting
+            Acting,
+            End
         }
         // Use this for initialization
         void Start()
@@ -52,10 +52,34 @@ namespace Assets.Scripts
 
         protected override void Behave()
         {
+            switch (state)
+            {
+                case State.Free:
+                    subState = SubState.Moving;
+                    Idle();
+                    break;
+                case State.TakeOrder:
+                    subState = SubState.Moving;
+                    SubBehave();
+                    break;
+                case State.BringFood:
+                    subState = SubState.Moving;
+                    SubBehave();
+                    break;
+            }
+        }
+
+        protected void SubBehave()
+        {
             switch (subState)
             {
-                case SubState.Idle:
-                    if(taskList.Count>0)
+                case SubState.Moving:
+                    movement.moveTo(currentTask.Coordinates);
+                    break;
+                case SubState.Acting:
+                    break;
+                case SubState.End:
+                    if (taskList.Count <= 0)
                     {
                         state = taskInterpreter[taskList[0].Id];
                         currentTask = taskList[0];
@@ -63,18 +87,41 @@ namespace Assets.Scripts
                         subState = SubState.Moving;
                         movement.moveTo(currentTask.Coordinates);
                     }
+                    else
+                    {
+                        state = State.Free;
+                        currentTask = null;
+                    }
                     break;
+            }
+        }
+
+        protected void Idle()
+        {
+            switch (subState)
+            {
                 case SubState.Moving:
+                    movement.moveTo(currentTask.Coordinates);
                     break;
                 case SubState.Acting:
+                    break;
+                case SubState.End:
                     break;
             }
         }
 
         public override void Notify(Task notification)
         {
-            taskList.Add(notification);
-            taskList.Sort(taskSort);
+            if(state == State.Free && currentTask != null)
+            {
+                currentTask = notification;
+                state = taskInterpreter[currentTask.Id];
+            }
+            else
+            {
+                taskList.Add(notification);
+                taskList.Sort(taskSort);
+            }
         }
     }
 }

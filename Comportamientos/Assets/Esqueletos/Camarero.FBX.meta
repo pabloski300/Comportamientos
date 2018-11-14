@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 75548125342084f48a60519dfa8abf98
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arm_down_l
+    100002: arm_down_r
+    100004: arm_up_l
+    100006: arm_up_r
+    100008: Base
+    100010: Body
+    100012: Bowtie
+    100014: bowtie
+    100016: //RootNode
+    100018: Eye1
+    100020: Eye2
+    100022: eyebrow_l
+    100024: eyebrow_r
+    100026: foot_l
+    100028: foot_r
+    100030: hair
+    100032: Hair 2
+    100034: Hand1
+    100036: Hand2
+    100038: hand_l
+    100040: hand_r
+    100042: hat
+    100044: Head
+    100046: head
+    100048: ik_foot_l
+    100050: ik_foot_r
+    100052: leg_down_l
+    100054: leg_down_r
+    100056: leg_up_l
+    100058: leg_up_r
+    100060: moustache
+    100062: Nose 3
+    100064: Pelvis
+    100066: root
+    100068: spine1
+    100070: spine2
+    100072: spine3
+    100074: spine4
+    100076: toe_l
+    100078: toe_r
+    100080: tophat
+    400000: arm_down_l
+    400002: arm_down_r
+    400004: arm_up_l
+    400006: arm_up_r
+    400008: Base
+    400010: Body
+    400012: Bowtie
+    400014: bowtie
+    400016: //RootNode
+    400018: Eye1
+    400020: Eye2
+    400022: eyebrow_l
+    400024: eyebrow_r
+    400026: foot_l
+    400028: foot_r
+    400030: hair
+    400032: Hair 2
+    400034: Hand1
+    400036: Hand2
+    400038: hand_l
+    400040: hand_r
+    400042: hat
+    400044: Head
+    400046: head
+    400048: ik_foot_l
+    400050: ik_foot_r
+    400052: leg_down_l
+    400054: leg_down_r
+    400056: leg_up_l
+    400058: leg_up_r
+    400060: moustache
+    400062: Nose 3
+    400064: Pelvis
+    400066: root
+    400068: spine1
+    400070: spine2
+    400072: spine3
+    400074: spine4
+    400076: toe_l
+    400078: toe_r
+    400080: tophat
+    2100000: No Name
+    4300000: Head
+    4300002: Body
+    4300004: Eye1
+    4300006: Eye2
+    4300008: Hand1
+    4300010: Hand2
+    4300012: Nose 3
+    4300014: Hair 2
+    4300016: Bowtie
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Bowtie
+    13700004: Eye1
+    13700006: Eye2
+    13700008: Hair 2
+    13700010: Hand1
+    13700012: Hand2
+    13700014: Head
+    13700016: Nose 3
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperArm' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: Camarero(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye1
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye2
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand1
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1.387, y: 1.387, z: 1.387}
+    - name: Hand2
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1.387, y: 1.387, z: 1.387}
+    - name: Nose 3
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1.125775, y: 1.125775, z: 1.125775}
+    - name: Hair 2
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1.156665, y: 1.156665, z: 1}
+    - name: Bowtie
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base
+      parentName: Camarero(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.50000006, y: -0.5, z: -0.4999999, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ik_foot_r
+      parentName: Camarero(Clone)
+      position: {x: 2.4508011, y: -5.7946554e-14, z: 0.43319854}
+      rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ik_foot_l
+      parentName: Camarero(Clone)
+      position: {x: -2.4508011, y: 7.215741e-14, z: 0.43319783}
+      rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: Camarero(Clone)
+      position: {x: -2.406359e-13, y: 1.69537e-40, z: 0.0000015936598}
+      rotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis
+      parentName: root
+      position: {x: -9.819753, y: -0.000000104081096, z: -2.3041616e-13}
+      rotation: {x: 6.6534426e-21, y: -1.04072634e-14, z: -1.4210855e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_up_r
+      parentName: Pelvis
+      position: {x: -0, y: 0, z: -2.445454}
+      rotation: {x: -0.018564904, y: 0.9998014, z: 0.007250183, w: 0.0000074821783}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_down_r
+      parentName: leg_up_r
+      position: {x: -5.6339703, y: -0.00013506413, z: 0.000036478043}
+      rotation: {x: -0.0055362186, y: -0.0013516305, z: 0.13316211, w: 0.9910779}
+      scale: {x: 1.0000083, y: 0.99999243, z: 1.0000002}
+    - name: foot_r
+      parentName: leg_down_r
+      position: {x: -3.0791974, y: 0.000000059604645, z: 0.00000023841858}
+      rotation: {x: 0.011127579, y: 0.0061546736, z: -0.56357276, w: 0.82596856}
+      scale: {x: 1.0000187, y: 0.9999804, z: 1}
+    - name: toe_r
+      parentName: foot_r
+      position: {x: -1.8768436, y: 0.06444883, z: 0.00006651878}
+      rotation: {x: -0.0000099893805, y: 0.000000015346545, z: -0.2816199, w: 0.95952606}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: spine1
+      parentName: Pelvis
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0000000024869915, y: 0.0000000033517178, z: 0.027660325, w: 0.9996174}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: spine2
+      parentName: spine1
+      position: {x: -3.3118591, y: 0, z: -7.1054274e-15}
+      rotation: {x: 0.00000001440131, y: 0.0000000057705476, z: 0.048191797, w: 0.9988381}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine3
+      parentName: spine2
+      position: {x: -3.303378, y: -0.00000011920929, z: 2.842171e-14}
+      rotation: {x: 0.000000014429177, y: -0.000000011967151, z: -0.07677285, w: 0.9970486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine4
+      parentName: spine3
+      position: {x: -3.3266373, y: 0, z: 0}
+      rotation: {x: 0.0000000024843099, y: 2.0899583e-10, z: 0.0009741158, w: 0.9999995}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm_up_l
+      parentName: spine4
+      position: {x: -0, y: -1.1386604, z: 2.4454536}
+      rotation: {x: -0.0155643, y: 0.94971985, z: -0.018153694, w: 0.31218663}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: arm_down_l
+      parentName: arm_up_l
+      position: {x: -4.854413, y: 0, z: -0.0000009536743}
+      rotation: {x: 0.000054230397, y: -0.0024285049, z: -0.07429077, w: 0.9972337}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: hand_l
+      parentName: arm_down_l
+      position: {x: -4.9245863, y: 0, z: -0.0000009536743}
+      rotation: {x: -0.19153576, y: 0.026336852, z: -0.090693176, w: 0.9769315}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: arm_up_r
+      parentName: spine4
+      position: {x: -0, y: -1.1386604, z: -2.4454541}
+      rotation: {x: -0.015564403, y: 0.9497196, z: 0.018153628, w: -0.31218725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm_down_r
+      parentName: arm_up_r
+      position: {x: -4.854414, y: 0, z: 0}
+      rotation: {x: -0.000054259253, y: 0.0024285514, z: -0.074289754, w: 0.99723375}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: hand_r
+      parentName: arm_down_r
+      position: {x: -4.9245872, y: 0.00000011920929, z: 0.0000009536743}
+      rotation: {x: 0.19153583, y: -0.026336769, z: -0.09069318, w: 0.9769315}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: bowtie
+      parentName: spine4
+      position: {x: 0.5019188, y: 3.3743916, z: -0.00000050951894}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: spine4
+      position: {x: -2.3404522, y: 0.437939, z: -0.000000066126844}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow_l
+      parentName: head
+      position: {x: -4.528595, y: 3.2484174, z: 0.77740806}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow_r
+      parentName: head
+      position: {x: -4.5066433, y: 3.2658083, z: -0.7837302}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: moustache
+      parentName: head
+      position: {x: -1.1182556, y: 3.8028045, z: -0.00000057420755}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hat
+      parentName: head
+      position: {x: -6.686985, y: 0.00000020861626, z: 3.5527137e-14}
+      rotation: {x: 2.1622138e-21, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tophat
+      parentName: hat
+      position: {x: -0.97818184, y: 0, z: -3.5527137e-15}
+      rotation: {x: -0.000000011172283, y: -0.06857502, z: 0.000000010354532, w: 0.997646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hair
+      parentName: head
+      position: {x: -0.94675446, y: -1.8534003, z: 0.00000027985544}
+      rotation: {x: 3.915246e-14, y: 0.00000014599549, z: 0.96688426, w: 0.25521523}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_up_l
+      parentName: Pelvis
+      position: {x: -0, y: 0, z: 2.445454}
+      rotation: {x: -0.018555319, y: 0.9998016, z: -0.0072504473, w: -0.000007413616}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_down_l
+      parentName: leg_up_l
+      position: {x: -5.6339703, y: -0.00013506413, z: -0.000036239624}
+      rotation: {x: 0.0055607874, y: 0.0013636228, z: 0.13314602, w: 0.9910799}
+      scale: {x: 1.0000014, y: 0.9999988, z: 1.0000001}
+    - name: foot_l
+      parentName: leg_down_l
+      position: {x: -3.079198, y: 0.000000059604645, z: -0.00000023841858}
+      rotation: {x: -0.011144487, y: -0.0061767534, z: -0.56358224, w: 0.8259617}
+      scale: {x: 0.99999577, y: 1.000004, z: 0.9999998}
+    - name: toe_l
+      parentName: foot_l
+      position: {x: -1.9266502, y: 0.1459446, z: -0.032419205}
+      rotation: {x: 0.000013508539, y: -0.000000006600097, z: -0.27071387, w: 0.9626599}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

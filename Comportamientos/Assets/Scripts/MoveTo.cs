@@ -7,11 +7,13 @@ public class MoveTo : MonoBehaviour {
 
     NavMeshAgent agent;
     Camera cam;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
         cam = FindObjectOfType<Camera>();
+        anim = GetComponent<Animator>();
 	}
 
     // Update is called once per frame
@@ -27,5 +29,6 @@ public class MoveTo : MonoBehaviour {
                 agent.SetDestination(hit.point);
             }
         }
+        anim.SetFloat("speed", agent.desiredVelocity.magnitude);
     }
 }

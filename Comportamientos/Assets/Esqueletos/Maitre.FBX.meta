@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 617aebcdcff584540af56a0887fcdb45
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arm_down_l
+    100002: arm_down_r
+    100004: arm_up_l
+    100006: arm_up_r
+    100008: Base
+    100010: Body
+    100012: Bowtie
+    100014: bowtie
+    100016: Eye1
+    100018: Eye2
+    100020: eyebrow_l
+    100022: eyebrow_r
+    100024: Eyebrows 3
+    100026: foot_l
+    100028: foot_r
+    100030: hair
+    100032: Hair 1
+    100034: Hand1
+    100036: Hand2
+    100038: hand_l
+    100040: hand_r
+    100042: hat
+    100044: Head
+    100046: head
+    100048: ik_foot_l
+    100050: ik_foot_r
+    100052: leg_down_l
+    100054: leg_down_r
+    100056: leg_up_l
+    100058: leg_up_r
+    100060: //RootNode
+    100062: moustache
+    100064: Moustache 2
+    100066: Nose 3
+    100068: Pelvis
+    100070: root
+    100072: spine1
+    100074: spine2
+    100076: spine3
+    100078: spine4
+    100080: toe_l
+    100082: toe_r
+    100084: tophat
+    400000: arm_down_l
+    400002: arm_down_r
+    400004: arm_up_l
+    400006: arm_up_r
+    400008: Base
+    400010: Body
+    400012: Bowtie
+    400014: bowtie
+    400016: Eye1
+    400018: Eye2
+    400020: eyebrow_l
+    400022: eyebrow_r
+    400024: Eyebrows 3
+    400026: foot_l
+    400028: foot_r
+    400030: hair
+    400032: Hair 1
+    400034: Hand1
+    400036: Hand2
+    400038: hand_l
+    400040: hand_r
+    400042: hat
+    400044: Head
+    400046: head
+    400048: ik_foot_l
+    400050: ik_foot_r
+    400052: leg_down_l
+    400054: leg_down_r
+    400056: leg_up_l
+    400058: leg_up_r
+    400060: //RootNode
+    400062: moustache
+    400064: Moustache 2
+    400066: Nose 3
+    400068: Pelvis
+    400070: root
+    400072: spine1
+    400074: spine2
+    400076: spine3
+    400078: spine4
+    400080: toe_l
+    400082: toe_r
+    400084: tophat
+    2100000: No Name
+    4300000: Head
+    4300002: Body
+    4300004: Eye1
+    4300006: Eye2
+    4300008: Hand1
+    4300010: Hand2
+    4300012: Nose 3
+    4300014: Moustache 2
+    4300016: Eyebrows 3
+    4300018: Hair 1
+    4300020: Bowtie
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Bowtie
+    13700004: Eye1
+    13700006: Eye2
+    13700008: Eyebrows 3
+    13700010: Hair 1
+    13700012: Hand1
+    13700014: Hand2
+    13700016: Head
+    13700018: Moustache 2
+    13700020: Nose 3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

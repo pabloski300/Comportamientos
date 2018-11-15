@@ -29,6 +29,6 @@ public class MoveTo : MonoBehaviour {
                 agent.SetDestination(hit.point);
             }
         }
-        anim.SetFloat("speed", agent.desiredVelocity.magnitude);
+        //anim.SetFloat("speed", agent.desiredVelocity.magnitude);
     }
 }

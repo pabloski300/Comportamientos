@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\RotateAround.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
+    <Compile Include="Assets\Scripts\Waiter.cs" />
     <Compile Include="Assets\Scripts\WaiterAgent.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/ComportamientosUni/Comportamientos/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

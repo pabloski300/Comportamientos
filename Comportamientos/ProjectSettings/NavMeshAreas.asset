@@ -11,11 +11,11 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: NavClientes
     cost: 1
-  - name: 
+  - name: NavCamareros
     cost: 1
-  - name: 
+  - name: NavCocineros
     cost: 1
   - name: 
     cost: 1
@@ -73,8 +73,8 @@ NavMeshProjectSettings:
   m_Settings:
   - serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.3
-    agentHeight: 2
+    agentRadius: 0.88
+    agentHeight: 2.32
     agentSlope: 45
     agentClimb: 0.75
     ledgeDropHeight: 0
@@ -89,8 +89,8 @@ NavMeshProjectSettings:
       m_Flags: 0
   - serializedVersion: 2
     agentTypeID: -1372625422
-    agentRadius: 0.3
-    agentHeight: 2
+    agentRadius: 0.88
+    agentHeight: 2.32
     agentSlope: 45
     agentClimb: 0.75
     ledgeDropHeight: 0
@@ -105,8 +105,8 @@ NavMeshProjectSettings:
       m_Flags: 0
   - serializedVersion: 2
     agentTypeID: -334000983
-    agentRadius: 0.3
-    agentHeight: 2
+    agentRadius: 0.88
+    agentHeight: 2.32
     agentSlope: 45
     agentClimb: 0.75
     ledgeDropHeight: 0

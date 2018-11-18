@@ -61,7 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SatateMachine Scripts\Idle.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\IdleWaiter.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\AgentMovement.cs" />

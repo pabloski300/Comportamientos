@@ -3,125 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Assets.Scripts.AbstractClasses;
+using UnityEngine.AI;
 
 namespace Assets.Scripts
 {
     public class WaiterAgent : StandardAgent
     {
-        State state;
-        SubState subState;
+        public NavMeshAgent agent;
 
-        List<Task> taskList;
-        Task currentTask;
+        public float wanderRadius;
+        public float wanderTimer;
 
-        TaskOrder taskSort = new TaskOrder();
+        public Animator anim;
 
-        AgentMovement movement;
+        //Estados
+        IdleWaiter idleState;
 
-        Dictionary<string, State> taskInterpreter = new Dictionary<string, State>
-        {
-            { "TakeOrder",State.TakeOrder},
-            { "BringGood",State.BringFood}
-        };
-
-        enum State
-        {
-            Free,
-            TakeOrder,
-            BringFood
-        }
-
-        enum SubState
-        {
-            Moving,
-            Acting,
-            End
-        }
         // Use this for initialization
-        void Start()
+        void Awake()
         {
             taskList = new List<Task>();
-            movement = GetComponent<AgentMovement>();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            Behave();
-        }
-
-        protected override void Behave()
-        {
-            switch (state)
-            {
-                case State.Free:
-                    subState = SubState.Moving;
-                    Idle();
-                    break;
-                case State.TakeOrder:
-                    subState = SubState.Moving;
-                    SubBehave();
-                    break;
-                case State.BringFood:
-                    subState = SubState.Moving;
-                    SubBehave();
-                    break;
-            }
-        }
-
-        protected void SubBehave()
-        {
-            switch (subState)
-            {
-                case SubState.Moving:
-                    movement.moveTo(currentTask.Coordinates);
-                    break;
-                case SubState.Acting:
-                    break;
-                case SubState.End:
-                    if (taskList.Count <= 0)
-                    {
-                        state = taskInterpreter[taskList[0].Id];
-                        currentTask = taskList[0];
-                        taskList.RemoveAt(0);
-                        subState = SubState.Moving;
-                        movement.moveTo(currentTask.Coordinates);
-                    }
-                    else
-                    {
-                        state = State.Free;
-                        currentTask = null;
-                    }
-                    break;
-            }
-        }
-
-        protected void Idle()
-        {
-            switch (subState)
-            {
-                case SubState.Moving:
-                    movement.moveTo(currentTask.Coordinates);
-                    break;
-                case SubState.Acting:
-                    break;
-                case SubState.End:
-                    break;
-            }
+            idleState = anim.GetBehaviour<IdleWaiter>();
+            idleState.waiter = this;
         }
 
         public override void Notify(Task notification)
         {
-            if(state == State.Free && currentTask != null)
-            {
-                currentTask = notification;
-                state = taskInterpreter[currentTask.Id];
-            }
-            else
-            {
-                taskList.Add(notification);
-                taskList.Sort(taskSort);
-            }
+            taskList.Add(notification);
         }
     }
 }

@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbef474fdb62f404da90abd95dc52aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waiter: {fileID: 0}
 --- !u!1101 &1101349753040572984
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

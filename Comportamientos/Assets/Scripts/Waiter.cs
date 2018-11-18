@@ -13,11 +13,11 @@ public class Waiter : MonoBehaviour {
     public Animator anim;
 
     //Estados
-    Idle idleState;
+    IdleWaiter idleState;
 
     private void Awake()
     {
-        idleState = anim.GetBehaviour<Idle>();
-        Idle.waiter = this;
+        idleState = anim.GetBehaviour<IdleWaiter>();
+        //idleState.waiter = this;
     }
 }

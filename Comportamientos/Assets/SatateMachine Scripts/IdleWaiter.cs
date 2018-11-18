@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Idle : StateMachineBehaviour {
+public class IdleWaiter : StateMachineBehaviour {
 
-    public static Waiter waiter;
-    private static Transform target;
-    private static float timer = 100;
+    public WaiterAgent waiter;
+    private Transform target;
+    private float timer = 100;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -32,8 +32,7 @@ public class Idle : StateMachineBehaviour {
     //Actuacion en funcion de lo comprobado en Look
     void Behave(Animator animator)
     {
-        Wander();
-        animator.SetFloat("speed", waiter.agent.desiredVelocity.magnitude);
+        //animator.SetFloat("speed", waiter.agent.desiredVelocity.magnitude);
     }
 
     //Funciones de movimiento aleatorio, coge un punto del navmesh dentro de un radio cada x tiempo

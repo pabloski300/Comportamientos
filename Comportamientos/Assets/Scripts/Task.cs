@@ -12,8 +12,8 @@ namespace Assets.Scripts
         //Posición donde debe acudir el agente a realizar la tarea
         public readonly Vector3 Coordinates;
         //Valor para poder ordenar las tareas por prioridad
-        public readonly int priority;
+        //public readonly int priority;
         //Valor para ordenar por orden de llegada en caso de tener tareas que comparten prioridad
-        public int Order;
+        //public int Order;
     }
 }

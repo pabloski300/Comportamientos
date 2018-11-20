@@ -7,12 +7,16 @@ using UnityEngine.AI;
 public class RecogerPedido : StateMachineBehaviour {
 
     public WaiterAgent waiter;
-    bool recogido;
+    bool arrived;
+    bool recived;
+    int times;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         NavMeshHit navPos;
-        recogido = false;
+        recived = false;
+        arrived = false;
+        times = 0;
         if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
         {
             waiter.agent.isStopped = false;
@@ -26,20 +30,32 @@ public class RecogerPedido : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance)
+        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !arrived)
         {
             waiter.agent.isStopped = true;
 
             Debug.Log("Recogiendo");
-            recogido = true;
-            //animator.SetTrigger("RecibirPedido");
-        }
+            arrived = true;
+            animator.SetTrigger("RecibirPedido");
 
-        if (waiter.agent.isStopped)
+        }else if (waiter.agent.isStopped)
         {
-            if (/*animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0)*/recogido)
+            if (!animator.IsInTransition(0))
             {
-                animator.SetTrigger("Cocina");
+                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !recived)
+                {
+                    if (times == 2)
+                    {
+                        animator.SetTrigger("Cocina");
+                        animator.SetTrigger("PedidoRecibido");
+                        recived = true;
+                    }
+                    else
+                    {
+                        animator.SetTrigger("RecibirPedido");
+                        times++;
+                    }
+                }
             }
         }
         animator.SetFloat("speed", waiter.agent.desiredVelocity.magnitude);

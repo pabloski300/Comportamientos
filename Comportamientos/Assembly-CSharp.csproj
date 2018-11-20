@@ -61,16 +61,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SatateMachine Scripts\EntregarPedidoaCocina.cs" />
     <Compile Include="Assets\SatateMachine Scripts\IdleWaiter.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\RecogerPedido.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\AgentMovement.cs" />
     <Compile Include="Assets\Scripts\Chore.cs" />
+    <Compile Include="Assets\Scripts\Mesa.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\RotateAround.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
     <Compile Include="Assets\Scripts\Waiter.cs" />
     <Compile Include="Assets\Scripts\WaiterAgent.cs" />
+    <Compile Include="Assets\Scripts\WaitPoint.cs" />
+    <Compile Include="Assets\Scripts\World.cs" />
+    <None Include="Assets\Animaciones\Animaciones_Readme.txt" />
+    <None Include="Assets\Sonidos\Sonidos_Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/ComportamientosUni/Comportamientos/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

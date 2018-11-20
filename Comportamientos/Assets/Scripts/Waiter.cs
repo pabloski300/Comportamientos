@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,6 +13,7 @@ public class Waiter : MonoBehaviour {
 
     public Animator anim;
 
+    public Task currentTask;
     //Estados
     IdleWaiter idleState;
 

@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Assets.Scripts;
+using System;
 
 namespace Assets.Scripts.AbstractClasses
 {
-    public abstract class StandardAgent : MonoBehaviour, IComparer<StandardAgent>
+    public abstract class StandardAgent : MonoBehaviour, IComparable
     {
-        protected List<Task> taskList;
+        public List<Task> taskList;
+        public Task currentTask;
+        public int taskNumber;
 
-        public int Compare(StandardAgent x, StandardAgent y)
+        public int CompareTo(object obj)
         {
-            if (x.taskList.Count > y.taskList.Count)
+            StandardAgent s = obj as StandardAgent;
+
+            if (this.taskNumber > s.taskNumber)
             {
-                return -1;
+                return 1;
             }
             else
             {
-                return 1;
+                return -1;
             }
         }
 

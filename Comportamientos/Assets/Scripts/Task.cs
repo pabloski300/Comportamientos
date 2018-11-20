@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.AbstractClasses;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +12,17 @@ namespace Assets.Scripts
         public readonly string Id;
         //Posición donde debe acudir el agente a realizar la tarea
         public readonly Vector3 Coordinates;
-        //Valor para poder ordenar las tareas por prioridad
-        //public readonly int priority;
-        //Valor para ordenar por orden de llegada en caso de tener tareas que comparten prioridad
-        //public int Order;
+        //Emisor de la tarea por si es necesario
+        public readonly StandardAgent Emisor;
+        //Tipo de receptor
+        public readonly string Receptor;
+
+        public Task(string _Id, Vector3 _Coordinates, StandardAgent _Emisor, string _Receptor)
+        {
+            Id = _Id;
+            Coordinates = _Coordinates;
+            Emisor = _Emisor;
+            Receptor = _Receptor;
+        }
     }
 }

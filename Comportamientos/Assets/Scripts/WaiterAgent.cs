@@ -20,8 +20,10 @@ namespace Assets.Scripts
 
         //Estados
         IdleWaiter idleState;
-        RecogerPedido recogerState;
-        EntregarPedido entregarState;
+        RecogerPedido recogerPedidoState;
+        EntregarPedido entregarPedidoState;
+        RecogerComida recogerComidaState;
+        EntregarComida entregarComidaState;
 
         // Use this for initialization
         void Awake()
@@ -29,10 +31,14 @@ namespace Assets.Scripts
             taskList = new List<Task>();
             idleState = anim.GetBehaviour<IdleWaiter>();
             idleState.waiter = this;
-            recogerState = anim.GetBehaviour<RecogerPedido>();
-            recogerState.waiter = this;
-            entregarState = anim.GetBehaviour<EntregarPedido>();
-            entregarState.waiter = this;
+            recogerPedidoState = anim.GetBehaviour<RecogerPedido>();
+            recogerPedidoState.waiter = this;
+            entregarPedidoState = anim.GetBehaviour<EntregarPedido>();
+            entregarPedidoState.waiter = this;
+            recogerComidaState = anim.GetBehaviour<RecogerComida>();
+            recogerComidaState.waiter = this;
+            entregarComidaState = anim.GetBehaviour<EntregarComida>();
+            entregarComidaState.waiter = this;
             startPosition = transform.position;
             startForward = transform.forward;
             world = FindObjectOfType<World>();

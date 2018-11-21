@@ -61,16 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SatateMachine Scripts\EntregarComida.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\EntregarPedido.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\IdleWaiter.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\RecogerComida.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\RecogerPedido.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Camarero\EntregarComida.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Camarero\EntregarPedido.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Camarero\IdleWaiter.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Camarero\RecogerComida.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Camarero\RecogerPedido.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Cocinero\Cocinar.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Cocinero\DejarComida.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Cocinero\IdleCooker.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\AgentMovement.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Chore.cs" />
+    <Compile Include="Assets\Scripts\CookerAgent.cs" />
     <Compile Include="Assets\Scripts\Mesa.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\RotateAround.cs" />

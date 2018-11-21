@@ -17,6 +17,7 @@ namespace Assets.Scripts
         //Tipo de receptor
         public readonly string Receptor;
 
+
         public Task(string _Id, Vector3 _Coordinates, StandardAgent _Emisor, string _Receptor)
         {
             Id = _Id;

@@ -1245,6 +1245,8 @@ MonoBehaviour:
   agent: {fileID: 195657790649723876}
   anim: {fileID: 95356742390332010}
   startPosition: {x: 0, y: 0, z: 0}
+  startForward: {x: 0, y: 0, z: 0}
+  world: {fileID: 0}
 --- !u!137 &137003985273074288
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

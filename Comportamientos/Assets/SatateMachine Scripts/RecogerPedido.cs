@@ -17,6 +17,7 @@ public class RecogerPedido : StateMachineBehaviour {
         recived = false;
         arrived = false;
         times = 0;
+
         if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
         {
             waiter.agent.isStopped = false;
@@ -36,7 +37,7 @@ public class RecogerPedido : StateMachineBehaviour {
 
             Debug.Log("Recogiendo");
             arrived = true;
-            animator.SetTrigger("RecibirPedido");
+            animator.SetTrigger("Interaccion");
 
         }else if (waiter.agent.isStopped)
         {
@@ -46,24 +47,23 @@ public class RecogerPedido : StateMachineBehaviour {
                 {
                     if (times == 2)
                     {
-                        animator.SetTrigger("Cocina");
-                        animator.SetTrigger("PedidoRecibido");
+                        animator.SetTrigger("Llevar");
+                        animator.SetTrigger("FinInteraccion");
                         recived = true;
                     }
                     else
                     {
-                        animator.SetTrigger("RecibirPedido");
+                        animator.SetTrigger("Interaccion");
                         times++;
                     }
                 }
             }
         }
-        animator.SetFloat("speed", waiter.agent.desiredVelocity.magnitude);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-    animator.ResetTrigger("Pedido");
+        //animator.ResetTrigger("Pedido");
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

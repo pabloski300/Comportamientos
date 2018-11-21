@@ -14,6 +14,9 @@ namespace Assets.Scripts
         public Animator anim;
 
         public Vector3 startPosition;
+        public Vector3 startForward;
+
+        public World world;
 
         //Estados
         IdleWaiter idleState;
@@ -31,6 +34,8 @@ namespace Assets.Scripts
             entregarState = anim.GetBehaviour<EntregarPedidoaCocina>();
             entregarState.waiter = this;
             startPosition = transform.position;
+            startForward = transform.forward;
+            world = FindObjectOfType<World>();
         }
 
         public override void Notify(Task notification)
@@ -58,6 +63,17 @@ namespace Assets.Scripts
                 currentTask = null;
             }
             taskNumber--;
+        }
+
+        private void Update()
+        {
+            anim.SetFloat("speed", agent.desiredVelocity.magnitude);
+        }
+
+        public void LookAt(Vector3 dir, float t)
+        {
+            Vector3 trueDir = new Vector3(dir.x, transform.forward.y, dir.z);
+            transform.forward = Vector3.Slerp(transform.forward, trueDir, t);
         }
     }
 }

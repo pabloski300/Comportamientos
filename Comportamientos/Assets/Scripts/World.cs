@@ -15,7 +15,10 @@ public class World : MonoBehaviour {
     public List<StandardAgent> limpieza;
 
     public List<Mesa> mesas;
-    public List<WaitPoint> cola;
+    public List<CheckPoint> cola;
+    public List<CheckPoint> barra;
+
+
 
     public void Update()
     {

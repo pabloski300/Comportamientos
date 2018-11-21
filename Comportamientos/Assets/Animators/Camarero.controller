@@ -68,7 +68,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Llevar
+  - m_Name: Entregar
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -382,7 +382,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Llevar
+    m_ConditionEvent: Entregar
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102188955318038906}
@@ -478,7 +478,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Llevar
+    m_ConditionEvent: Entregar
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102548201961111942}
@@ -526,7 +526,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LLevar Comanda
+  m_Name: EntregarComida
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -633,7 +633,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: EntregarPedidoaCocina
+  m_Name: EntregarPedido
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -660,7 +660,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Recibir Comanda
+  m_Name: RecogerComida
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

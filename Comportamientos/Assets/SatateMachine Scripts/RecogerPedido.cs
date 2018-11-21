@@ -14,8 +14,6 @@ public class RecogerPedido : StateMachineBehaviour {
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         NavMeshHit navPos;
-        recived = false;
-        arrived = false;
         times = 0;
 
         if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
@@ -31,32 +29,23 @@ public class RecogerPedido : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !arrived)
+        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
             waiter.agent.isStopped = true;
-
             Debug.Log("Recogiendo");
-            arrived = true;
             animator.SetTrigger("Interaccion");
-
-        }else if (waiter.agent.isStopped)
+        }
+        else if (waiter.agent.isStopped && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            if (!animator.IsInTransition(0))
+            if (times == 2)
             {
-                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !recived)
-                {
-                    if (times == 2)
-                    {
-                        animator.SetTrigger("Llevar");
-                        animator.SetTrigger("FinInteraccion");
-                        recived = true;
-                    }
-                    else
-                    {
-                        animator.SetTrigger("Interaccion");
-                        times++;
-                    }
-                }
+                animator.SetTrigger("Entregar");
+                animator.SetTrigger("FinInteraccion");
+            }
+            else
+            {
+                animator.SetTrigger("Interaccion");
+                times++;
             }
         }
     }

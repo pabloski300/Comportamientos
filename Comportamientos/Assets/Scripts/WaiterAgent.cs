@@ -21,7 +21,7 @@ namespace Assets.Scripts
         //Estados
         IdleWaiter idleState;
         RecogerPedido recogerState;
-        EntregarPedidoaCocina entregarState;
+        EntregarPedido entregarState;
 
         // Use this for initialization
         void Awake()
@@ -31,7 +31,7 @@ namespace Assets.Scripts
             idleState.waiter = this;
             recogerState = anim.GetBehaviour<RecogerPedido>();
             recogerState.waiter = this;
-            entregarState = anim.GetBehaviour<EntregarPedidoaCocina>();
+            entregarState = anim.GetBehaviour<EntregarPedido>();
             entregarState.waiter = this;
             startPosition = transform.position;
             startForward = transform.forward;

@@ -61,10 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SatateMachine Scripts\EntregarComanda.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\EntregarPedidoaCocina.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\EntregarComida.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\EntregarPedido.cs" />
     <Compile Include="Assets\SatateMachine Scripts\IdleWaiter.cs" />
-    <Compile Include="Assets\SatateMachine Scripts\RecibirComanda.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\RecogerComida.cs" />
     <Compile Include="Assets\SatateMachine Scripts\RecogerPedido.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />

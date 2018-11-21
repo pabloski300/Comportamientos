@@ -21,13 +21,7 @@ public class EntregarPedido : StateMachineBehaviour
         times = 1;
         entregando = false;
         Vector3 closePoint = ColsePoint();
-        NavMeshHit navPos;
-        if (NavMesh.SamplePosition(closePoint, out navPos, 100, -1))
-        {
-            waiter.agent.isStopped = false;
-            waiter.agent.SetDestination(navPos.position);
-        }
-        else
+        if (!waiter.CalculateNavPos(closePoint))
         {
             animator.SetTrigger("Idle");
         }
@@ -58,7 +52,6 @@ public class EntregarPedido : StateMachineBehaviour
         if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
             waiter.agent.isStopped = true;
-            //notify Cocinero.
         }
         else if (waiter.agent.isStopped && looking < 1)
         {
@@ -76,15 +69,16 @@ public class EntregarPedido : StateMachineBehaviour
             checkPoint.ocupado = false;
             animator.SetTrigger("Idle");
             animator.SetTrigger("FinDejar");
+            waiter.world.Notify(new Task("Cocinar", Vector3.zero, waiter, "Cocinero"));
         }
 
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        //animator.ResetTrigger("Cocina");
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

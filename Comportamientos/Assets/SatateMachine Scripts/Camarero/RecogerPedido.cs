@@ -7,25 +7,17 @@ using UnityEngine.AI;
 public class RecogerPedido : StateMachineBehaviour {
 
     public WaiterAgent waiter;
-    bool arrived;
-    bool recived;
     int times;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        NavMeshHit navPos;
         times = 0;
 
-        if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates))
         {
-            waiter.agent.isStopped = false;
-            waiter.agent.SetDestination(navPos.position);
+            animator.SetTrigger("Entregar");
         }
-        else
-        {
-            animator.SetTrigger("Cocina");
-        }
-	}
+    }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

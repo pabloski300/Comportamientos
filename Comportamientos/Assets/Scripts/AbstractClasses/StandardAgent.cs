@@ -4,11 +4,13 @@ using UnityEngine;
 
 using Assets.Scripts;
 using System;
+using UnityEngine.AI;
 
 namespace Assets.Scripts.AbstractClasses
 {
-    public abstract class StandardAgent : MonoBehaviour, IComparable
+    public abstract class StandardAgent : MonoBehaviour
     {
+        public NavMeshAgent agent;
         protected List<Task> taskList;
         public Task currentTask;
         public int taskNumber;
@@ -69,6 +71,21 @@ namespace Assets.Scripts.AbstractClasses
         {
             Vector3 trueDir = new Vector3(dir.x, transform.forward.y, dir.z);
             transform.forward = Vector3.Slerp(transform.forward, trueDir, t);
+        }
+
+        public bool CalculateNavPos(Vector3 pos)
+        {
+            NavMeshHit navPos;
+            if (NavMesh.SamplePosition(pos, out navPos, 100, -1))
+            {
+                agent.isStopped = false;
+                agent.SetDestination(navPos.position);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

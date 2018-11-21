@@ -13,13 +13,8 @@ public class IdleWaiter : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         looking = 0;
         waiter.Completed();
-        NavMeshHit navPos;
-        if (NavMesh.SamplePosition(waiter.startPosition, out navPos, 100, -1))
-        {
-            waiter.agent.isStopped = false;
-            waiter.agent.SetDestination(navPos.position);
-        }
-        else
+        
+        if (!waiter.CalculateNavPos(waiter.startPosition))
         {
             animator.SetTrigger("Idle");
         }

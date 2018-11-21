@@ -12,19 +12,14 @@ public class RecogerComida : StateMachineBehaviour {
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        NavMeshHit navPos;
         looking = 0;
         cogiendo = false;
 
-        if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
-        {
-            waiter.agent.isStopped = false;
-            waiter.agent.SetDestination(navPos.position);
-        }
-        else
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates))
         {
             animator.SetTrigger("Entregar");
         }
+
     }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -12,17 +12,11 @@ public class EntregarComida : StateMachineBehaviour {
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        NavMeshHit navPos;
+        waiter.agent.isStopped = false;
         looking = 0;
         dejando = false;
-        //Vector3 Pos = waiter.currentTask.ExtraInfo.GetComponent<ClientAgent>().mesa.transform.position;
-
-        if (NavMesh.SamplePosition(waiter.currentTask.Coordinates, out navPos, 100, -1))
-        {
-            waiter.agent.isStopped = false;
-            waiter.agent.SetDestination(navPos.position);
-        }
-        else
+        
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates))
         {
             animator.SetTrigger("Idle");
         }

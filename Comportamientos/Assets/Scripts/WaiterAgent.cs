@@ -9,8 +9,6 @@ namespace Assets.Scripts
 {
     public class WaiterAgent : StandardAgent
     {
-        public NavMeshAgent agent;
-
         public Animator anim;
 
         public Vector3 startPosition;
@@ -45,7 +43,7 @@ namespace Assets.Scripts
         }
         private void Update()
         {
-            anim.SetFloat("speed", agent.desiredVelocity.magnitude);
+            anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
         }
     }
 }

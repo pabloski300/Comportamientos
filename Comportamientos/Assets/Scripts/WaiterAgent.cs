@@ -9,6 +9,11 @@ namespace Assets.Scripts
 {
     public class WaiterAgent : StandardAgent
     {
+        public Transform coger;
+        public Transform centroBandeja;
+
+        public GameObject plato;
+
         public Animator anim;
 
         public Vector3 startPosition;
@@ -44,6 +49,15 @@ namespace Assets.Scripts
         private void Update()
         {
             anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
+
+            if (agent.desiredVelocity.magnitude<=0)
+            {
+                agent.avoidancePriority = 1;
+            }
+            else
+            {
+                agent.avoidancePriority = 99;
+            }
         }
     }
 }

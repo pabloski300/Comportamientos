@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -37,13 +38,13 @@ public class DejarComida : StateMachineBehaviour {
             cooker.LookAt(cooker.encimeraSeleccionada.orientationCocinero.forward,looking);
             looking += Time.deltaTime*5;
         }
-        else if (cooker.agent.isStopped && looking >= 1 /*&& !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1*/)
+        else if (cooker.agent.isStopped && looking >= 1)
         {
             plato.transform.parent = cooker.encimeraSeleccionada.plato;
-            //Cambiar por las encimeras
             plato.transform.localPosition = Vector3.zero;
             plato.transform.localRotation = Quaternion.Euler(-90,0,0);
             cooker.encimeraSeleccionada.platoPrefab = plato;
+            cooker.world.Notify(new Task("Comida", cooker.encimeraSeleccionada.gameObject, cooker, "Camarero", cooker.currentTask.ExtraInfo));
             animator.SetTrigger("Idle");
         }
 

@@ -26,7 +26,7 @@ public class World : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-             Task t = new Task("Pedido",mesas[x].gameObject,null,"Camareros");
+            Task t = new Task("Pedido",mesas[x].gameObject,null,"Camareros",null);
             camareros[0].Notify(t);
             camareros = camareros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
             x = (x + 1) % mesas.Count;
@@ -42,6 +42,8 @@ public class World : MonoBehaviour {
                 cocineros = cocineros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
                 break;
             case "Camarero":
+                camareros[0].Notify(tarea);
+                camareros = camareros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
                 break;
         }
     }

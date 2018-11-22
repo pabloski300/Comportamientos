@@ -69,7 +69,7 @@ public class EntregarPedido : StateMachineBehaviour
             checkPoint.ocupado = false;
             animator.SetTrigger("Idle");
             animator.SetTrigger("FinDejar");
-            waiter.world.Notify(new Task("Cocinar", null, waiter, "Cocinero"));
+            waiter.world.Notify(new Task("Cocinar", null, waiter, "Cocinero", waiter.currentTask.Coordinates));
         }
 
     }

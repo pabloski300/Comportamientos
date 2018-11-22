@@ -16,14 +16,17 @@ namespace Assets.Scripts
         public readonly StandardAgent Emisor;
         //Tipo de receptor
         public readonly string Receptor;
+        //Informacion extra necesaria
+        public readonly GameObject ExtraInfo;
 
 
-        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, string _Receptor)
+        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, string _Receptor, GameObject _ExtraInfo)
         {
             Id = _Id;
             Coordinates = _Coordinates;
             Emisor = _Emisor;
             Receptor = _Receptor;
+            ExtraInfo = _ExtraInfo;
         }
     }
 }

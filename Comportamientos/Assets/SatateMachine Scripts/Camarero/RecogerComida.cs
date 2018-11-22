@@ -39,11 +39,21 @@ public class RecogerComida : StateMachineBehaviour {
             animator.SetTrigger("Coger");
             Debug.Log("Cogiendo");
             cogiendo = true;
+            Encimera enci = waiter.currentTask.Coordinates.GetComponent<Encimera>();
+            waiter.plato = enci.platoPrefab;
+            waiter.plato.transform.parent = waiter.coger;
+            waiter.plato.transform.localPosition = Vector3.zero;
+            waiter.plato.transform.localRotation = Quaternion.Euler(-90, 0, 0);
+            enci.platoPrefab = null;
+            enci.ocupado = false;
         }
         else if (waiter.agent.isStopped && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             animator.SetTrigger("Entregar");
             animator.SetTrigger("FinCoger");
+            waiter.plato.transform.parent = waiter.centroBandeja;
+            waiter.plato.transform.localPosition = Vector3.zero;
+            waiter.plato.transform.localRotation = Quaternion.Euler(-90, 0, 0);
         }
     }
 

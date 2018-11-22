@@ -208,6 +208,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1341791533513750
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4636041213165230}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1365605810600086
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +249,21 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4152228811621258}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1405516507156360
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4960372099358366}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -843,7 +873,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7209792, y: 0.7209798, z: 0.72098}
-  m_Children: []
+  m_Children:
+  - {fileID: 4636041213165230}
   m_Father: {fileID: 4152228811621258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -908,7 +939,8 @@ Transform:
   m_LocalRotation: {x: -0.19153576, y: 0.026336852, z: -0.090693176, w: 0.9769315}
   m_LocalPosition: {x: -4.9245863, y: 0, z: -0.0000009536743}
   m_LocalScale: {x: 1, y: 1, z: 0.9999999}
-  m_Children: []
+  m_Children:
+  - {fileID: 4960372099358366}
   m_Father: {fileID: 4614407187993766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1023,6 +1055,19 @@ Transform:
   m_Father: {fileID: 4408268131285584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4636041213165230
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1341791533513750}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.06}
+  m_LocalScale: {x: 12.499983, y: 12.5, z: 12.500013}
+  m_Children: []
+  m_Father: {fileID: 4237803723061784}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!4 &4642880502294258
 Transform:
   m_ObjectHideFlags: 1
@@ -1157,8 +1202,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365605810600086}
-  m_LocalRotation: {x: 0, y: 0.27395913, z: 0, w: 0.9617413}
-  m_LocalPosition: {x: 2.97, y: 0, z: -4.12}
+  m_LocalRotation: {x: -0, y: -0.20675772, z: -0, w: 0.9783922}
+  m_LocalPosition: {x: 2.86, y: 0, z: -0.85}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4576682899125074}
@@ -1176,7 +1221,7 @@ Transform:
   - {fileID: 4762711007549624}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 31.8, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -23.865002, z: 0}
 --- !u!4 &4792735116580674
 Transform:
   m_ObjectHideFlags: 1
@@ -1231,6 +1276,19 @@ Transform:
   - {fileID: 4663309714503314}
   m_Father: {fileID: 4114204590394858}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4960372099358366
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405516507156360}
+  m_LocalRotation: {x: 0.8479877, y: 0.42015505, z: -0.11249166, w: -0.30287325}
+  m_LocalPosition: {x: 0.85, y: -0.61, z: -0.81}
+  m_LocalScale: {x: 12.500002, y: 12.500038, z: 12.500012}
+  m_Children: []
+  m_Father: {fileID: 4293241937197090}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4961732796361192
 Transform:
@@ -1344,7 +1402,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 195657790649723876}
+  obstacle: {fileID: 0}
   taskNumber: 0
+  coger: {fileID: 4960372099358366}
+  centroBandeja: {fileID: 4636041213165230}
+  plato: {fileID: 0}
   anim: {fileID: 95356742390332010}
   startPosition: {x: 0, y: 0, z: 0}
   startForward: {x: 0, y: 0, z: 0}

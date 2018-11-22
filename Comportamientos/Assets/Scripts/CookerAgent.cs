@@ -7,7 +7,10 @@ using UnityEngine.AI;
 
 public class CookerAgent : StandardAgent {
 
-    
+    public Transform plato;
+    public GameObject platoPrefab;
+
+    public Encimera encimeraSeleccionada;
 
     public Animator anim;
 

@@ -78,16 +78,15 @@
     <Compile Include="Assets\SatateMachine Scripts\Cocinero\IdleCooker.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
-    <Compile Include="Assets\Scripts\AgentMovement.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Chore.cs" />
     <Compile Include="Assets\Scripts\ClientAgent.cs" />
     <Compile Include="Assets\Scripts\CookerAgent.cs" />
+    <Compile Include="Assets\Scripts\Encimera.cs" />
     <Compile Include="Assets\Scripts\Mesa.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\RotateAround.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
-    <Compile Include="Assets\Scripts\Waiter.cs" />
     <Compile Include="Assets\Scripts\WaiterAgent.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
     <None Include="Assets\Animaciones\Animaciones_Readme.txt" />

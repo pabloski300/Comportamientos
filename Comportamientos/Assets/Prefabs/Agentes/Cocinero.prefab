@@ -299,6 +299,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1533983773951634
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425995343200802}
+  m_Layer: 0
+  m_Name: PointPlato
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1587342341593074
 GameObject:
   m_ObjectHideFlags: 1
@@ -687,7 +702,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896048486131020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: 0, z: -3.859}
+  m_LocalPosition: {x: -8.15, y: 0, z: -1.675}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4647358394474046}
@@ -743,7 +758,8 @@ Transform:
   m_LocalRotation: {x: -0.19153576, y: 0.026336852, z: -0.090693176, w: 0.9769315}
   m_LocalPosition: {x: -4.9245863, y: 0, z: -0.0000009536743}
   m_LocalScale: {x: 1, y: 1, z: 0.9999999}
-  m_Children: []
+  m_Children:
+  - {fileID: 4425995343200802}
   m_Father: {fileID: 4106982236470740}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -942,6 +958,19 @@ Transform:
   m_Father: {fileID: 4513097847226300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4425995343200802
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533983773951634}
+  m_LocalRotation: {x: 0.0021776028, y: -0.9841291, z: -0.10170817, w: -0.14539848}
+  m_LocalPosition: {x: -1.58, y: 0.3, z: 3.86}
+  m_LocalScale: {x: 12.500036, y: 12.500022, z: 12.499997}
+  m_Children: []
+  m_Father: {fileID: 4132473110942012}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -11.585001, y: -196.959, z: 1.4790001}
 --- !u!4 &4513097847226300
 Transform:
   m_ObjectHideFlags: 1
@@ -1251,7 +1280,7 @@ Animator:
   m_GameObject: {fileID: 1896048486131020}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9e6037d0633b6b34fba410dd6843e04f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a28b9df580d712e44890ff948053dfcf, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1271,8 +1300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32607722f181c6f43aeffceb51fa59e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskNumber: 0
   agent: {fileID: 195443726856391494}
+  taskNumber: 0
+  plato: {fileID: 4425995343200802}
+  platoPrefab: {fileID: 1302861663827908, guid: d0ada512a80fe8245b097bccc2d4d884,
+    type: 2}
+  encimeraSeleccionada: {fileID: 0}
   anim: {fileID: 95944889007470858}
   startPosition: {x: 0, y: 0, z: 0}
   startForward: {x: 0, y: 0, z: 0}

@@ -6,39 +6,23 @@ using UnityEngine.AI;
 public class DejarComida : StateMachineBehaviour {
 
     public CookerAgent cooker;
-    public CheckPoint checkPoint;
     float looking;
+    GameObject plato;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("Bandeja",true);
+        plato = Instantiate(cooker.platoPrefab,cooker.plato);
+        plato.transform.localPosition = Vector3.zero;
+        plato.transform.localRotation = Quaternion.Euler(-90, 0, 0);
         cooker.agent.isStopped = false;
         looking = 0;
-        Vector3 closePoint = ColsePoint();
 
-        if (!cooker.CalculateNavPos(closePoint))
+        if (!cooker.CalculateNavPos(cooker.encimeraSeleccionada.transform.position))
         {
             animator.SetTrigger("Idle");
         }
-    }
-
-    private Vector3 ColsePoint()
-    {
-        Vector3 v = cooker.world.barraCocina[0].transform.position;
-        float d = Vector3.Distance(cooker.transform.position, v);
-        checkPoint = cooker.world.barraCocina[0];
-
-        for (int i = 1; i < cooker.world.barraCocina.Count; i++)
-        {
-            if (Vector3.Distance(cooker.transform.position, cooker.world.barraCocina[i].transform.position) < d && !cooker.world.barraCocina[i].ocupado)
-            {
-                v = cooker.world.barraCocina[i].transform.position;
-                d = Vector3.Distance(cooker.transform.position, v);
-                checkPoint = cooker.world.barraCocina[i];
-            }
-        }
-        checkPoint.ocupado = true;
-        return v;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -47,16 +31,19 @@ public class DejarComida : StateMachineBehaviour {
         if (cooker.agent.remainingDistance <= cooker.agent.stoppingDistance && !cooker.agent.isStopped)
         {
             cooker.agent.isStopped = true;
-            //notify Cocinero.
         }
         else if (cooker.agent.isStopped && looking < 1)
         {
-            cooker.LookAt(checkPoint.transform.forward, looking);
-            looking += Time.deltaTime;
+            cooker.LookAt(cooker.encimeraSeleccionada.orientationCocinero.forward,looking);
+            looking += Time.deltaTime*5;
         }
         else if (cooker.agent.isStopped && looking >= 1 /*&& !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1*/)
         {
-            checkPoint.ocupado = false;
+            plato.transform.parent = cooker.encimeraSeleccionada.plato;
+            //Cambiar por las encimeras
+            plato.transform.localPosition = Vector3.zero;
+            plato.transform.localRotation = Quaternion.Euler(-90,0,0);
+            cooker.encimeraSeleccionada.platoPrefab = plato;
             animator.SetTrigger("Idle");
         }
 

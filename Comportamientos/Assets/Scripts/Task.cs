@@ -10,15 +10,15 @@ namespace Assets.Scripts
     {
         //etiqueta que identifica el tipo de tarea que este objeto representa
         public readonly string Id;
-        //Posición donde debe acudir el agente a realizar la tarea
-        public readonly Vector3 Coordinates;
+        //Objeto al que debe acudir el agente a realizar la tarea
+        public readonly GameObject Coordinates;
         //Emisor de la tarea por si es necesario
         public readonly StandardAgent Emisor;
         //Tipo de receptor
         public readonly string Receptor;
 
 
-        public Task(string _Id, Vector3 _Coordinates, StandardAgent _Emisor, string _Receptor)
+        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, string _Receptor)
         {
             Id = _Id;
             Coordinates = _Coordinates;

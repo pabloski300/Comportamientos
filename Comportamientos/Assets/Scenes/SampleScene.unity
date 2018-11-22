@@ -184,6 +184,22 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0ed3a5d52457ded4593456c08a0053fe, type: 3}
+--- !u!114 &45333219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45333215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af996711a3aaf148a60bf306046017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plato: {fileID: 402754149}
+  platoPrefab: {fileID: 0}
+  ocupado: 0
+  orientationCocinero: {fileID: 1976536536}
+  orientationCamarero: {fileID: 638989109}
 --- !u!1 &66326186
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +320,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66326186}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &107132337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+    type: 2}
+  m_PrefabInternal: {fileID: 891839245}
+--- !u!114 &107132338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114976038583144472, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+    type: 2}
+  m_PrefabInternal: {fileID: 891839245}
+  m_Script: {fileID: 11500000, guid: 32607722f181c6f43aeffceb51fa59e0, type: 3}
+--- !u!1 &111081007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111081008}
+  m_Layer: 0
+  m_Name: OrientacionCamarero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111081008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 111081007}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -0.00000024746618, y: 0.0000021388182, z: 0}
+  m_LocalScale: {x: 12.46121, y: 12.500003, z: 6.556961}
+  m_Children: []
+  m_Father: {fileID: 1927535388}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -270, y: 90.00001, z: 90.00001}
 --- !u!1 &113238465
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +423,7 @@ Transform:
   - {fileID: 1831068012}
   - {fileID: 948860097}
   - {fileID: 2134318142}
+  - {fileID: 107132337}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -680,6 +736,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &402754148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402754149}
+  m_Layer: 0
+  m_Name: PointPlato (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402754149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402754148}
+  m_LocalRotation: {x: -0.5000001, y: -0.5000001, z: -0.4999999, w: -0.4999999}
+  m_LocalPosition: {x: -0, y: 0, z: 12.45}
+  m_LocalScale: {x: 12.500001, y: 12.500001, z: 7.3116236}
+  m_Children: []
+  m_Father: {fileID: 45333216}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &413254313
 Prefab:
   m_ObjectHideFlags: 0
@@ -1188,10 +1272,6 @@ Prefab:
       propertyPath: m_Name
       value: Camarero (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4779398511866792, guid: 84852ddcfbe5f2b4cafd10fb07735f27, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 31.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84852ddcfbe5f2b4cafd10fb07735f27, type: 2}
   m_IsPrefabAsset: 0
@@ -1257,6 +1337,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ocupado: 0
+--- !u!1 &599164661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599164662}
+  m_Layer: 0
+  m_Name: PointPlato
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &599164662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599164661}
+  m_LocalRotation: {x: 0.0021776028, y: -0.9841291, z: -0.10170817, w: -0.14539848}
+  m_LocalPosition: {x: -1.58, y: 0.3, z: 3.86}
+  m_LocalScale: {x: 12.500036, y: 12.500022, z: 12.499997}
+  m_Children: []
+  m_Father: {fileID: 1691809453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -11.585001, y: -196.959, z: 1.4790001}
+--- !u!1 &638989108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638989109}
+  m_Layer: 0
+  m_Name: OrientacionCamarero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638989109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638989108}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0.000002145479, z: 0}
+  m_LocalScale: {x: 12.500035, y: 12.500003, z: 7.311631}
+  m_Children: []
+  m_Father: {fileID: 45333216}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -270, y: 90.00001, z: 90.00001}
 --- !u!1 &639567906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1999412693241150, guid: 56f35a964d993bb4a9d712f81cf30783,
@@ -1409,7 +1545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1322994369858902, guid: 039d075199cdc3248bd102348d1577f3, type: 2}
       propertyPath: m_Name
-      value: Encimera_basica (3)
+      value: Encimera_basica
       objectReference: {fileID: 0}
     - target: {fileID: 4237957987380654, guid: 039d075199cdc3248bd102348d1577f3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1463,6 +1599,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estadoActual: 0
+--- !u!1 &863204664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863204665}
+  m_Layer: 0
+  m_Name: OrientacionCamarero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &863204665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863204664}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0.000002145479, z: 0}
+  m_LocalScale: {x: 12.500032, y: 12.500003, z: 6.5800056}
+  m_Children: []
+  m_Father: {fileID: 1446676555}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -270, y: 90.00001, z: 90.00001}
+--- !u!1001 &891839245
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 132196630}
+    m_Modifications:
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 95944889007470858, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a28b9df580d712e44890ff948053dfcf, type: 2}
+    - target: {fileID: 114976038583144472, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+        type: 2}
+      propertyPath: plato
+      value: 
+      objectReference: {fileID: 599164662}
+    - target: {fileID: 114976038583144472, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+        type: 2}
+      propertyPath: platoPrefab
+      value: 
+      objectReference: {fileID: 1302861663827908, guid: d0ada512a80fe8245b097bccc2d4d884,
+        type: 2}
+    - target: {fileID: 1896048486131020, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_Name
+      value: Cocinero (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425995343200802, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &895122439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1937,7 @@ MonoBehaviour:
   - {fileID: 433510876}
   cocineros:
   - {fileID: 1969889231}
+  - {fileID: 107132338}
   maitre: []
   limpieza: []
   mesas:
@@ -1724,8 +1955,9 @@ MonoBehaviour:
   - {fileID: 1871600918}
   - {fileID: 504392382}
   barraCocina:
-  - {fileID: 589943110}
-  - {fileID: 2080288709}
+  - {fileID: 1927535391}
+  - {fileID: 1446676558}
+  - {fileID: 45333219}
 --- !u!4 &1090633877
 Transform:
   m_ObjectHideFlags: 0
@@ -1924,6 +2156,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ocupado: 0
+--- !u!1 &1195043087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195043088}
+  m_Layer: 0
+  m_Name: PointPlato
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195043088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195043087}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 12.45}
+  m_LocalScale: {x: 12.461194, y: 12.500001, z: 6.5569725}
+  m_Children: []
+  m_Father: {fileID: 1927535388}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210029442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,11 +2283,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 95944889007470858, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: a28b9df580d712e44890ff948053dfcf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1, type: 2}
   m_IsPrefabAsset: 0
@@ -2191,6 +2446,34 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1409031102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409031103}
+  m_Layer: 0
+  m_Name: OrientacionCocinero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409031103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409031102}
+  m_LocalRotation: {x: 0.00000005960465, y: 0.7071068, z: 0.7071068, w: -0.00000005960465}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.461194, y: 12.500001, z: 6.5569725}
+  m_Children: []
+  m_Father: {fileID: 1927535388}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 90.00001, z: 90.00001}
 --- !u!1 &1411694588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2632,22 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0ed3a5d52457ded4593456c08a0053fe, type: 3}
+--- !u!114 &1446676558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446676554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af996711a3aaf148a60bf306046017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plato: {fileID: 1523880967}
+  platoPrefab: {fileID: 0}
+  ocupado: 0
+  orientationCocinero: {fileID: 1754734795}
+  orientationCamarero: {fileID: 863204665}
 --- !u!1001 &1453113629
 Prefab:
   m_ObjectHideFlags: 0
@@ -2545,6 +2844,34 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1523880966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523880967}
+  m_Layer: 0
+  m_Name: PointPlato
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1523880967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523880966}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 12.45}
+  m_LocalScale: {x: 12.500001, y: 12.500001, z: 6.579997}
+  m_Children: []
+  m_Father: {fileID: 1446676555}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1537064858
 Prefab:
   m_ObjectHideFlags: 0
@@ -3145,6 +3472,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1691809453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4132473110942012, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+    type: 2}
+  m_PrefabInternal: {fileID: 891839245}
 --- !u!1001 &1699431345
 Prefab:
   m_ObjectHideFlags: 0
@@ -3225,6 +3557,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039d075199cdc3248bd102348d1577f3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1754734794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754734795}
+  m_Layer: 0
+  m_Name: OrientacionCocinero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1754734795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1754734794}
+  m_LocalRotation: {x: 0.00000005960465, y: 0.7071068, z: 0.7071068, w: -0.00000005960465}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.500001, y: 12.500001, z: 6.579997}
+  m_Children: []
+  m_Father: {fileID: 1446676555}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 90.00001, z: 90.00001}
 --- !u!1001 &1769292105
 Prefab:
   m_ObjectHideFlags: 0
@@ -3709,6 +4069,22 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0ed3a5d52457ded4593456c08a0053fe, type: 3}
+--- !u!114 &1927535391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1927535387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af996711a3aaf148a60bf306046017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plato: {fileID: 1195043088}
+  platoPrefab: {fileID: 0}
+  ocupado: 0
+  orientationCocinero: {fileID: 1409031103}
+  orientationCamarero: {fileID: 111081008}
 --- !u!1001 &1934925426
 Prefab:
   m_ObjectHideFlags: 0
@@ -3885,6 +4261,34 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1214468241}
   m_Script: {fileID: 11500000, guid: 32607722f181c6f43aeffceb51fa59e0, type: 3}
+--- !u!1 &1976536535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976536536}
+  m_Layer: 0
+  m_Name: OrientacionCocinero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976536536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976536535}
+  m_LocalRotation: {x: 0.00000005960465, y: 0.7071068, z: 0.7071068, w: -0.00000005960465}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.500001, y: 12.500001, z: 7.3116236}
+  m_Children: []
+  m_Father: {fileID: 45333216}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 90.00001, z: 90.00001}
 --- !u!1001 &2046870468
 Prefab:
   m_ObjectHideFlags: 0

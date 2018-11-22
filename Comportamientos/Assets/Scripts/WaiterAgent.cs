@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Assets.Scripts.AbstractClasses;
-using UnityEngine.AI;
+
 
 namespace Assets.Scripts
 {

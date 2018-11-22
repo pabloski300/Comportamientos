@@ -18,7 +18,7 @@ public class World : MonoBehaviour {
     public List<CheckPoint> cola;
     public List<CheckPoint> barra;
     public List<CheckPoint> cocina;
-    public List<CheckPoint> barraCocina;
+    public List<Encimera> barraCocina;
 
 
 
@@ -26,7 +26,7 @@ public class World : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-             Task t = new Task("Pedido",mesas[x].transform.position,null,"Camareros");
+             Task t = new Task("Pedido",mesas[x].gameObject,null,"Camareros");
             camareros[0].Notify(t);
             camareros = camareros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
             x = (x + 1) % mesas.Count;
@@ -40,6 +40,8 @@ public class World : MonoBehaviour {
             case "Cocinero":
                 cocineros[0].Notify(tarea);
                 cocineros = cocineros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
+                break;
+            case "Camarero":
                 break;
         }
     }

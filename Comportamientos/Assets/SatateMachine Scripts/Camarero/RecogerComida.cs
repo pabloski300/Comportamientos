@@ -15,7 +15,7 @@ public class RecogerComida : StateMachineBehaviour {
         looking = 0;
         cogiendo = false;
 
-        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates))
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates.transform.position))
         {
             animator.SetTrigger("Entregar");
         }
@@ -30,7 +30,7 @@ public class RecogerComida : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && looking < 1)
         {
-            Vector3 look = waiter.currentTask.Coordinates - waiter.transform.position;
+            Vector3 look = waiter.currentTask.Coordinates.transform.position - waiter.transform.position;
             waiter.LookAt(look, looking);
             looking += Time.deltaTime;
         }

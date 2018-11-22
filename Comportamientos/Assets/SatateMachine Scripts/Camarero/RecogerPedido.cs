@@ -13,7 +13,7 @@ public class RecogerPedido : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         times = 0;
 
-        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates))
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates.transform.position))
         {
             animator.SetTrigger("Entregar");
         }

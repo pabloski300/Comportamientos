@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class Comer : StateMachineBehaviour {
 
+    public ClientAgent client;
     float startTime;
     public float eatingTime;
     float Timer;
@@ -21,6 +23,7 @@ public class Comer : StateMachineBehaviour {
         Timer += Time.deltaTime;
         if(Timer>=eatingTime)
         {
+            client.Completed();
             animator.SetTrigger("PedirCuenta");
         }
 	}

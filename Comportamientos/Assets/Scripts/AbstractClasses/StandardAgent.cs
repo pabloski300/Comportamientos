@@ -14,6 +14,12 @@ namespace Assets.Scripts.AbstractClasses
         protected List<Task> taskList;
         public Task currentTask;
         public int taskNumber;
+        public World world;
+
+        public Vector3 startPosition;
+        public Vector3 startForward;
+
+        public Animator anim;
 
         public int CompareTo(object obj)
         {

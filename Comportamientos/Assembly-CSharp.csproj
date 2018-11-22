@@ -79,7 +79,6 @@
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
-    <Compile Include="Assets\Scripts\Chore.cs" />
     <Compile Include="Assets\Scripts\ClientAgent.cs" />
     <Compile Include="Assets\Scripts\CookerAgent.cs" />
     <Compile Include="Assets\Scripts\Encimera.cs" />

@@ -20,14 +20,14 @@ public class EntregarPedido : StateMachineBehaviour
         looking = 0;
         times = 1;
         entregando = false;
-        Vector3 closePoint = ColsePoint();
+        Vector3 closePoint = ClosePoint();
         if (!waiter.CalculateNavPos(closePoint))
         {
             animator.SetTrigger("Idle");
         }
     }
 
-    private Vector3 ColsePoint()
+    private Vector3 ClosePoint()
     {
         Vector3 v = waiter.world.barra[0].transform.position;
         float d = Vector3.Distance(waiter.transform.position, v);
@@ -69,7 +69,7 @@ public class EntregarPedido : StateMachineBehaviour
             checkPoint.ocupado = false;
             animator.SetTrigger("Idle");
             animator.SetTrigger("FinDejar");
-            waiter.world.Notify(new Task("Cocinar", null, waiter, "Cocinero"));
+            waiter.world.Notify(new Task("Cocinar", null, waiter, Task.Receptor.Camarero));
         }
 
     }

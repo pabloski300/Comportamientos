@@ -12,13 +12,6 @@ public class CookerAgent : StandardAgent {
 
     public Encimera encimeraSeleccionada;
 
-    public Animator anim;
-
-    public Vector3 startPosition;
-    public Vector3 startForward;
-
-    public World world;
-
     //Estados
     IdleCooker idleState;
     Cocinar cocinarState;

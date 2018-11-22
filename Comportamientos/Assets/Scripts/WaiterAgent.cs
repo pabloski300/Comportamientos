@@ -9,13 +9,6 @@ namespace Assets.Scripts
 {
     public class WaiterAgent : StandardAgent
     {
-        public Animator anim;
-
-        public Vector3 startPosition;
-        public Vector3 startForward;
-
-        public World world;
-
         //Estados
         IdleWaiter idleState;
         RecogerPedido recogerPedidoState;

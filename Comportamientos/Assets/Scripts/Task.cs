@@ -15,15 +15,23 @@ namespace Assets.Scripts
         //Emisor de la tarea por si es necesario
         public readonly StandardAgent Emisor;
         //Tipo de receptor
-        public readonly string Receptor;
+        public enum Receptor
+        {
+            Cocinero,
+            Camarero,
+            Cliente,
+            Maitre,
+            Limpiador
+        };
 
+        public Receptor receptor;
 
-        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, string _Receptor)
+        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, Receptor _Receptor)
         {
             Id = _Id;
             Coordinates = _Coordinates;
             Emisor = _Emisor;
-            Receptor = _Receptor;
+            receptor = _Receptor;
         }
     }
 }

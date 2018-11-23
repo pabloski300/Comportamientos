@@ -76,6 +76,8 @@
     <Compile Include="Assets\SatateMachine Scripts\Cocinero\Cocinar.cs" />
     <Compile Include="Assets\SatateMachine Scripts\Cocinero\DejarComida.cs" />
     <Compile Include="Assets\SatateMachine Scripts\Cocinero\IdleCooker.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Limpiador\Barrer.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Limpiador\LimpiarMesa.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />

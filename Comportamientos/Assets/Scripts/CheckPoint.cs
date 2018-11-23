@@ -5,4 +5,6 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour {
 
     public bool ocupado = false;
+
 }
+

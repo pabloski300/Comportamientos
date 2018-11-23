@@ -19,6 +19,7 @@ public class World : MonoBehaviour {
     public List<CheckPoint> barra;
     public List<CheckPoint> cocina;
     public List<Encimera> barraCocina;
+    public List<CheckPoint> calle;
 
     public void Awake()
     {

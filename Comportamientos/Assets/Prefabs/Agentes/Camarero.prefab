@@ -1404,13 +1404,13 @@ MonoBehaviour:
   agent: {fileID: 195657790649723876}
   obstacle: {fileID: 0}
   taskNumber: 0
+  world: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  startForward: {x: 0, y: 0, z: 0}
+  anim: {fileID: 95356742390332010}
   coger: {fileID: 4960372099358366}
   centroBandeja: {fileID: 4636041213165230}
   plato: {fileID: 0}
-  anim: {fileID: 95356742390332010}
-  startPosition: {x: 0, y: 0, z: 0}
-  startForward: {x: 0, y: 0, z: 0}
-  world: {fileID: 0}
 --- !u!137 &137003985273074288
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1864,7 +1864,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1365605810600086}
   m_Enabled: 1
   m_AgentTypeID: -334000983
-  m_Radius: 11
+  m_Radius: 6
   m_Speed: 2
   m_Acceleration: 10
   avoidancePriority: 50

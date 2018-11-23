@@ -13,4 +13,7 @@ public class Mesa : MonoBehaviour {
     }
 
     public Estado estadoActual = Estado.Libre;
+
+    public Transform posicionPlato;
+    public Transform asiento;
 }

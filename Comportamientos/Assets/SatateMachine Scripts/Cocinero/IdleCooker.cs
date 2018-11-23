@@ -13,13 +13,13 @@ public class IdleCooker : StateMachineBehaviour {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        encimeras = cooker.world.barraCocina.Count;
+        encimeras = cooker.world.barraComida.Count;
         animator.SetBool("Bandeja", false);
         looking = 0;
         cooker.Completed();
         NavMeshHit navPos;
         animator.SetBool("Lavar", true);
-        if (NavMesh.SamplePosition(cooker.startPosition, out navPos, 100, -1))
+        if (NavMesh.SamplePosition(cooker.fregadero.transform.position, out navPos, 100, -1))
         {
             cooker.agent.isStopped = false;
             cooker.agent.SetDestination(navPos.position);
@@ -48,10 +48,10 @@ public class IdleCooker : StateMachineBehaviour {
             bool encimeraLibre = false;
             for(int i=0; i<encimeras && !encimeraLibre; i++)
             {
-                if (!cooker.world.barraCocina[i].ocupado)
+                if (!cooker.world.barraComida[i].ocupado)
                 {
                     encimeraLibre = true;
-                    cooker.encimeraSeleccionada = cooker.world.barraCocina[i];
+                    cooker.encimeraSeleccionada = cooker.world.barraComida[i];
                     cooker.encimeraSeleccionada.ocupado = true;
                 }
             }

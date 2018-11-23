@@ -44,7 +44,7 @@ public class DejarComida : StateMachineBehaviour {
             plato.transform.localPosition = Vector3.zero;
             plato.transform.localRotation = Quaternion.Euler(-90,0,0);
             cooker.encimeraSeleccionada.platoPrefab = plato;
-            cooker.world.Notify(new Task("Comida", cooker.encimeraSeleccionada.gameObject, cooker, "Camarero", cooker.currentTask.ExtraInfo));
+            cooker.world.Notify(new Task("Comida", cooker.encimeraSeleccionada.gameObject, cooker, Task.Receptor.Camarero, cooker.currentTask.extraInfo));
             animator.SetTrigger("Idle");
         }
 

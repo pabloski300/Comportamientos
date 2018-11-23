@@ -16,7 +16,7 @@ public class EntregarComida : StateMachineBehaviour {
         looking = 0;
         dejando = false;
         
-        if (!waiter.CalculateNavPos(waiter.currentTask.ExtraInfo.transform.position))
+        if (!waiter.CalculateNavPos(waiter.currentTask.extraInfo.transform.position))
         {
             animator.SetTrigger("Idle");
         }

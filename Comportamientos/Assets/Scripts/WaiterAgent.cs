@@ -16,6 +16,11 @@ namespace Assets.Scripts
         RecogerComida recogerComidaState;
         EntregarComida entregarComidaState;
 
+        public Transform coger;
+        public Transform centroBandeja;
+
+        public GameObject plato;
+
         // Use this for initialization
         void Awake()
         {

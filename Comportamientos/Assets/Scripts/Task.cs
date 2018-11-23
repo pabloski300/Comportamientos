@@ -24,6 +24,8 @@ namespace Assets.Scripts
             Limpiador
         };
 
+        public GameObject extraInfo;
+
         public Receptor receptor;
 
         public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, Receptor _Receptor)
@@ -32,6 +34,14 @@ namespace Assets.Scripts
             Coordinates = _Coordinates;
             Emisor = _Emisor;
             receptor = _Receptor;
+        }
+        public Task(string _Id, GameObject _Coordinates, StandardAgent _Emisor, Receptor _Receptor, GameObject _extraInfo)
+        {
+            Id = _Id;
+            Coordinates = _Coordinates;
+            Emisor = _Emisor;
+            receptor = _Receptor;
+            extraInfo = _extraInfo;
         }
     }
 }

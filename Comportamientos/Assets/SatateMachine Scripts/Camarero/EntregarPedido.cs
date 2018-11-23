@@ -29,17 +29,17 @@ public class EntregarPedido : StateMachineBehaviour
 
     private Vector3 ClosePoint()
     {
-        Vector3 v = waiter.world.barra[0].transform.position;
+        Vector3 v = waiter.world.barraPedidos[0].transform.position;
         float d = Vector3.Distance(waiter.transform.position, v);
-        checkPoint = waiter.world.barra[0];
+        checkPoint = waiter.world.barraPedidos[0];
 
-        for (int i = 1; i < waiter.world.barra.Count; i++)
+        for (int i = 1; i < waiter.world.barraPedidos.Count; i++)
         {
-            if (Vector3.Distance(waiter.transform.position, waiter.world.barra[i].transform.position) < d && !waiter.world.barra[i].ocupado)
+            if (Vector3.Distance(waiter.transform.position, waiter.world.barraPedidos[i].transform.position) < d && !waiter.world.barraPedidos[i].ocupado)
             {
-                v = waiter.world.barra[i].transform.position;
+                v = waiter.world.barraPedidos[i].transform.position;
                 d = Vector3.Distance(waiter.transform.position, v);
-                checkPoint = waiter.world.barra[i];
+                checkPoint = waiter.world.barraPedidos[i];
             }
         }
         checkPoint.ocupado = true;
@@ -69,7 +69,7 @@ public class EntregarPedido : StateMachineBehaviour
             checkPoint.ocupado = false;
             animator.SetTrigger("Idle");
             animator.SetTrigger("FinDejar");
-            waiter.world.Notify(new Task("Cocinar", null, waiter, Task.Receptor.Camarero));
+            waiter.world.Notify(new Task("Cocinar", null, waiter, Task.Receptor.Cocinero,waiter.currentTask.Coordinates));
         }
 
     }

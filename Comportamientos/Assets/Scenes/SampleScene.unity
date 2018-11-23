@@ -2014,10 +2014,6 @@ Prefab:
       propertyPath: m_Name
       value: Camarero (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4779398511866792, guid: 84852ddcfbe5f2b4cafd10fb07735f27, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -23.865002
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84852ddcfbe5f2b4cafd10fb07735f27, type: 2}
   m_IsPrefabAsset: 0

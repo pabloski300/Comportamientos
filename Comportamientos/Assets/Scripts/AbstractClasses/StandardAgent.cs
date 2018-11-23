@@ -11,6 +11,7 @@ namespace Assets.Scripts.AbstractClasses
     public abstract class StandardAgent : MonoBehaviour
     {
         public NavMeshAgent agent;
+        public NavMeshObstacle obstacle;
         protected List<Task> taskList;
         public Task currentTask;
         public int taskNumber;
@@ -20,20 +21,6 @@ namespace Assets.Scripts.AbstractClasses
         public Vector3 startForward;
 
         public Animator anim;
-
-        public int CompareTo(object obj)
-        {
-            StandardAgent s = obj as StandardAgent;
-
-            if (this.taskNumber > s.taskNumber)
-            {
-                return 1;
-            }
-            else
-            {
-                return -1;
-            }
-        }
 
         /// <summary>
         /// Este método se usará para enviar notificaciones al agente

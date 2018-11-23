@@ -19,7 +19,7 @@ public class IdleCooker : StateMachineBehaviour {
         cooker.Completed();
         NavMeshHit navPos;
         animator.SetBool("Lavar", true);
-        if (NavMesh.SamplePosition(cooker.startPosition, out navPos, 100, -1))
+        if (NavMesh.SamplePosition(cooker.fregadero.transform.position, out navPos, 100, -1))
         {
             cooker.agent.isStopped = false;
             cooker.agent.SetDestination(navPos.position);

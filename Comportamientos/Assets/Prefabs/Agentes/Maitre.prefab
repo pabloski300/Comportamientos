@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 4587024199938614}
   - component: {fileID: 95558333286587612}
   - component: {fileID: 195392377281262588}
+  - component: {fileID: 114442449824238662}
   m_Layer: 0
   m_Name: Maitre
   m_TagString: Untagged
@@ -1289,6 +1290,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114442449824238662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1214114739300596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137012229315326722
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1838,7 +1850,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1214114739300596}
   m_Enabled: 1
   m_AgentTypeID: -334000983
-  m_Radius: 11
+  m_Radius: 6
   m_Speed: 2
   m_Acceleration: 10
   avoidancePriority: 50

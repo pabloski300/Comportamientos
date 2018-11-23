@@ -12,6 +12,8 @@ public class CookerAgent : StandardAgent {
 
     public Encimera encimeraSeleccionada;
 
+    public GameObject fregadero;
+
     //Estados
     IdleCooker idleState;
     Cocinar cocinarState;

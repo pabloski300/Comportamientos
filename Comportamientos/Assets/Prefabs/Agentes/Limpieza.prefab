@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 4300458056579266}
   - component: {fileID: 95157854309020410}
   - component: {fileID: 195214558801491926}
+  - component: {fileID: 114412936793059878}
   m_Layer: 0
   m_Name: Limpieza
   m_TagString: Untagged
@@ -1229,6 +1230,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114412936793059878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261693777566940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137153869650810094
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1682,7 +1694,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1261693777566940}
   m_Enabled: 1
   m_AgentTypeID: -334000983
-  m_Radius: 11
+  m_Radius: 6
   m_Speed: 2
   m_Acceleration: 10
   avoidancePriority: 50

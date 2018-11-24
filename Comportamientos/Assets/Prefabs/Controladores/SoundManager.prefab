@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1901334614547142}
+  m_IsPrefabAsset: 1
+--- !u!1 &1901334614547142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4580663982153934}
+  - component: {fileID: 114699068620469298}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4580663982153934
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901334614547142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114699068620469298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901334614547142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cb24c98355bf04a90e91e74bc55c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AmbienteCiudad
+    clip: {fileID: 8300000, guid: 2695242a32fb68948a5d7cbc31781faf, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: AmbienteGente
+    clip: {fileID: 8300000, guid: fc03e1de10138f04181b1eb92752ed44, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ClienteComer
+    clip: {fileID: 8300000, guid: d435e475985393040bd3bd388323ef4c, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ClienteLlamarCamarero
+    clip: {fileID: 8300000, guid: d3f6a5470e618fa429202a589b2b2a11, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ClientePagar
+    clip: {fileID: 8300000, guid: 8cb0b708fd1e26a41bea79507697daab, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CocineroCuchillo
+    clip: {fileID: 8300000, guid: dc8847fd7ba2ed34b91ccd2724cc6b3f, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CocineroFregar
+    clip: {fileID: 8300000, guid: 2092a870ee8ab3a428064b2e36cf7bee, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CocineroManos
+    clip: {fileID: 8300000, guid: 0d435ce5ecadf5a46a7c1d3046465ef3, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionF1
+    clip: {fileID: 8300000, guid: ca0c22f258aa65f4a9e055e879097feb, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionF2
+    clip: {fileID: 8300000, guid: b3cd0621fa55f464099a136aaf843a97, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionF3
+    clip: {fileID: 8300000, guid: 490a56c61b65831479dff69d8df2fc40, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionF4
+    clip: {fileID: 8300000, guid: 68cbf0ae6dbf7b1449db89ccc2d284a1, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionM1
+    clip: {fileID: 8300000, guid: 89bfe3733944631489e05987db32c829, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionM2
+    clip: {fileID: 8300000, guid: 26b5194bff3f6fb4f8766d81f74eb0b2, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionM3
+    clip: {fileID: 8300000, guid: 6e12f9ad663041844827084a1e1000e3, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InteraccionM4
+    clip: {fileID: 8300000, guid: a9e9cca1a654bc74a9192a06fdd1a168, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Barrer
+    clip: {fileID: 8300000, guid: 6ac8a55d37f620e46bb0f26d4244278b, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LimpiarMesa
+    clip: {fileID: 8300000, guid: a2c46d7e1cb61ad4d8b781f6ffacde47, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

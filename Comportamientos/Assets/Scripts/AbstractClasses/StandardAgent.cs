@@ -11,7 +11,6 @@ namespace Assets.Scripts.AbstractClasses
     public abstract class StandardAgent : MonoBehaviour
     {
         public NavMeshAgent agent;
-        public NavMeshObstacle obstacle;
         protected List<Task> taskList;
         public Task currentTask;
         public int taskNumber;
@@ -21,6 +20,8 @@ namespace Assets.Scripts.AbstractClasses
         public Vector3 startForward;
 
         public Animator anim;
+
+        public SoundManager soundManager;
 
         /// <summary>
         /// Este método se usará para enviar notificaciones al agente

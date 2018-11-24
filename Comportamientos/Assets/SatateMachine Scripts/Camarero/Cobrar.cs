@@ -34,6 +34,7 @@ public class Cobrar : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && looking >= 1 && !cobrando)
         {
+            waiter.soundManager.Play("ClentePagar");
             animator.SetTrigger("Cobrar");
             Debug.Log("Cobrando");
             cobrando = true;

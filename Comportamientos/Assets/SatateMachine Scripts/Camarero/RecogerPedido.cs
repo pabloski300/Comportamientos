@@ -23,6 +23,9 @@ public class RecogerPedido : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
+            System.Random r = new System.Random();
+            int x = r.Next(1, 5);
+            waiter.soundManager.Play("InteraccionM" + x);
             waiter.agent.isStopped = true;
             Debug.Log("Recogiendo");
             animator.SetTrigger("Interaccion");
@@ -36,6 +39,9 @@ public class RecogerPedido : StateMachineBehaviour {
             }
             else
             {
+                System.Random r = new System.Random();
+                int x = r.Next(1, 5);
+                waiter.soundManager.Play("InteraccionM" + x);
                 animator.SetTrigger("Interaccion");
                 times++;
             }

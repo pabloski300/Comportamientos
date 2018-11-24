@@ -17,11 +17,12 @@ public class World : MonoBehaviour {
     public List<Mesa> mesas;
     public List<CheckPoint> cola;
     public List<CheckPoint> barraPedidos;
-    public List<CheckPoint> cocina;
     public List<Encimera> barraComida;
     public List<CheckPoint> calle;
 
-    public void Awake()
+    public SoundManager soundManager;
+
+    public void Start()
     {
         agentsDictionary = new Dictionary<Task.Receptor, List<StandardAgent>>()
         {
@@ -30,6 +31,8 @@ public class World : MonoBehaviour {
             {Task.Receptor.Maitre, maitre},
             {Task.Receptor.Limpiador, limpieza}
         };
+
+        soundManager.Play("AmbienteCiudad");
     }
 
     public void Update()

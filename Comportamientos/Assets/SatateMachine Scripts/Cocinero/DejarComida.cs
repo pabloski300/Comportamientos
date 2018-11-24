@@ -35,7 +35,8 @@ public class DejarComida : StateMachineBehaviour {
         }
         else if (cooker.agent.isStopped && looking < 1)
         {
-            cooker.LookAt(cooker.encimeraSeleccionada.orientationCocinero.forward,looking);
+            Vector3 look = cooker.encimeraSeleccionada.transform.position - cooker.transform.position;
+            cooker.LookAt(look,looking);
             looking += Time.deltaTime*5;
         }
         else if (cooker.agent.isStopped && looking >= 1)

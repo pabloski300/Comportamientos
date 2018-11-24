@@ -1301,16 +1301,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 195443726856391494}
-  obstacle: {fileID: 0}
   taskNumber: 0
   world: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   startForward: {x: 0, y: 0, z: 0}
   anim: {fileID: 95944889007470858}
+  soundManager: {fileID: 0}
   plato: {fileID: 4425995343200802}
-  platoPrefab: {fileID: 1302861663827908, guid: d0ada512a80fe8245b097bccc2d4d884,
+  platoPrefab: {fileID: 1302861663827908, guid: 6594c1c8e9d0e9e42ad67512933754de,
     type: 2}
+  cuchilo: {fileID: 0}
+  cuchilloPrefab: {fileID: 0}
   encimeraSeleccionada: {fileID: 0}
+  fregadero: {fileID: 0}
+  tabla: {fileID: 0}
+  sarten: {fileID: 0}
 --- !u!137 &137126768047409426
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

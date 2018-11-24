@@ -7,8 +7,6 @@ public class Encimera : MonoBehaviour {
     public Transform plato;
     public GameObject platoPrefab;
     public bool ocupado;
-    public Transform orientationCocinero;
-    public Transform orientationCamarero;
 
 	// Use this for initialization
 	void Start () {

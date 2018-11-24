@@ -93,7 +93,11 @@
     <Compile Include="Assets\Scripts\Task.cs" />
     <Compile Include="Assets\Scripts\WaiterAgent.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
+    <Compile Include="Assets\SetRenderQueue.cs" />
+    <Compile Include="Assets\SetRenderQueueCharacter.cs" />
+    <None Include="Assets\Stencil.shader" />
     <None Include="Assets\Animaciones\Animaciones_Readme.txt" />
+    <None Include="Assets\Depth.shader" />
     <None Include="Assets\Sonidos\Sonidos_Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/shadow/Documents/GitHub/Comportamientos/Comportamientos/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

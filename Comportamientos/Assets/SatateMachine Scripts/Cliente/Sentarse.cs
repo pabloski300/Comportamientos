@@ -5,11 +5,12 @@ using Assets.Scripts;
 
 public class Sentarse : StateMachineBehaviour {
 
-    ClientAgent client;
+    public ClientAgent client;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         client.CalculateNavPos(client.currentTask.Coordinates.transform.position);
+        client.mesa = client.currentTask.extraInfo.GetComponent<Mesa>();
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

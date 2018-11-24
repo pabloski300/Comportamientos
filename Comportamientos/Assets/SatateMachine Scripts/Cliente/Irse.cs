@@ -6,7 +6,7 @@ using Assets.Scripts;
 public class Irse : StateMachineBehaviour {
 
     World world;
-    ClientAgent client;
+    public ClientAgent client;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

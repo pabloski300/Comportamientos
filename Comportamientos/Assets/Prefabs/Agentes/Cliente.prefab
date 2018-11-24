@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 95966949110919584}
   - component: {fileID: 195125173196955394}
   - component: {fileID: 114929750322976748}
+  - component: {fileID: 114111432724673440}
   m_Layer: 0
   m_Name: Cliente
   m_TagString: Untagged
@@ -1221,7 +1222,7 @@ Animator:
   m_GameObject: {fileID: 1783416435954008}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9c5fee98be04908439de2cb3a34e60a2, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7096619ac24534641bf0b58979d0bb96, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1230,13 +1231,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114929750322976748
+--- !u!114 &114111432724673440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783416435954008}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51e641143b78ba4e9d7b64445285785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 195125173196955394}
+  obstacle: {fileID: 0}
+  taskNumber: 0
+  world: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  startForward: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
+  mesa: {fileID: 0}
+--- !u!114 &114929750322976748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783416435954008}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
   m_Name: 

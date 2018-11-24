@@ -8,12 +8,6 @@ namespace Assets.Scripts
 {
     public class ClientAgent : StandardAgent
     {
-        public Animator anim;
-
-        public Vector3 startPosition;
-        public Vector3 startForward;
-
-        public World world;
 
         //Estados:
         Paseando paseando;
@@ -23,10 +17,12 @@ namespace Assets.Scripts
         Comer comer;
         PedirCuenta pedirCuenta;
         Irse irse;
+        public Mesa mesa;
 
         // Use this for initialization
         void Start()
         {
+            anim = GetComponent<Animator>();
             paseando = anim.GetBehaviour<Paseando>();
             hacerCola = anim.GetBehaviour<HacerCola>();
             sentarse = anim.GetBehaviour<Sentarse>();
@@ -34,6 +30,13 @@ namespace Assets.Scripts
             comer = anim.GetBehaviour<Comer>();
             pedirCuenta = anim.GetBehaviour<PedirCuenta>();
             irse = anim.GetBehaviour<Irse>();
+            paseando.client = this;
+            hacerCola.client = this;
+            sentarse.client = this;
+            pedirComida.client = this;
+            comer.client = this;
+            pedirCuenta.client = this;
+            irse.client = this;
         }
 
         // Update is called once per frame

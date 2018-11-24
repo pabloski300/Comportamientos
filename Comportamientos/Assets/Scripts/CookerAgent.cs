@@ -10,9 +10,14 @@ public class CookerAgent : StandardAgent {
     public Transform plato;
     public GameObject platoPrefab;
 
+    public Transform cuchilo;
+    public Transform cuchilloPrefab;
+
     public Encimera encimeraSeleccionada;
 
     public GameObject fregadero;
+    public GameObject tabla;
+    public GameObject sarten;
 
     //Estados
     IdleCooker idleState;
@@ -32,6 +37,7 @@ public class CookerAgent : StandardAgent {
         startPosition = transform.position;
         startForward = transform.forward;
         world = FindObjectOfType<World>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void Update()

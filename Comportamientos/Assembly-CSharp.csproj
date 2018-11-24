@@ -88,6 +88,8 @@
     <Compile Include="Assets\Scripts\Mesa.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\RotateAround.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
     <Compile Include="Assets\Scripts\WaiterAgent.cs" />
     <Compile Include="Assets\Scripts\World.cs" />

@@ -11,6 +11,7 @@ public class Cocinar : StateMachineBehaviour {
     bool cocinando;
     float times;
     int cocinarRandom;
+    Vector3 pos;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,31 +21,20 @@ public class Cocinar : StateMachineBehaviour {
         looking = 0;
         cocinando = false;
         times = 0;
-        Vector3 closePoint = ColsePoint();
 
-        if (!cooker.CalculateNavPos(closePoint))
+        if (cocinarRandom == 1)
+        {
+            pos = cooker.sarten.transform.position;
+        }
+        else
+        {
+            pos = cooker.tabla.transform.position;
+        }
+
+        if (!cooker.CalculateNavPos(pos))
         {
             animator.SetTrigger("Idle");
         }
-    }
-
-    private Vector3 ColsePoint()
-    {
-        Vector3 v = cooker.world.cocina[0].transform.position;
-        float d = Vector3.Distance(cooker.transform.position, v);
-        checkPoint = cooker.world.cocina[0];
-
-        for (int i = 1; i < cooker.world.cocina.Count; i++)
-        {
-            if (Vector3.Distance(cooker.transform.position, cooker.world.cocina[i].transform.position) < d && !cooker.world.cocina[i].ocupado)
-            {
-                v = cooker.world.cocina[i].transform.position;
-                d = Vector3.Distance(cooker.transform.position, v);
-                checkPoint = cooker.world.cocina[i];
-            }
-        }
-        checkPoint.ocupado = true;
-        return v;
     }
 
     /// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -56,11 +46,20 @@ public class Cocinar : StateMachineBehaviour {
         }
         else if (cooker.agent.isStopped && looking < 1)
         {
-            cooker.LookAt(Vector3.zero, looking);
+            Vector3 look = pos - cooker.transform.position;
+            cooker.LookAt(look, looking);
             looking += Time.deltaTime;
         }
         else if (cooker.agent.isStopped && looking >= 1 && !cocinando)
         {
+            if(cocinarRandom == 1)
+            {
+                cooker.soundManager.Play("CocineroManos");
+            }
+            else
+            {
+                cooker.soundManager.Play("CocineroCuchillo");
+            }
             animator.SetTrigger("Cocinar"+cocinarRandom);
             Debug.Log("Cocinando");
             cocinando = true;
@@ -69,7 +68,6 @@ public class Cocinar : StateMachineBehaviour {
         {
             if (times == 2)
             {
-                checkPoint.ocupado = false;
                 animator.SetTrigger("Entregar");
                 animator.SetTrigger("FinCocinar");
             }

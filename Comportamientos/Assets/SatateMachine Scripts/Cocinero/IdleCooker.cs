@@ -40,7 +40,9 @@ public class IdleCooker : StateMachineBehaviour {
         }
         else if (cooker.agent.isStopped && looking < 1)
         {
-            cooker.LookAt(cooker.startForward, looking);
+            cooker.soundManager.Play("CocineroFregar");
+            Vector3 look = cooker.fregadero.transform.position - cooker.transform.position;
+            cooker.LookAt(look, looking);
             looking += Time.deltaTime;
         }
         else if (cooker.currentTask != null)
@@ -64,6 +66,7 @@ public class IdleCooker : StateMachineBehaviour {
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        cooker.soundManager.Stop("CocineroFregar");
         animator.SetBool("Lavar", false);
     }
 

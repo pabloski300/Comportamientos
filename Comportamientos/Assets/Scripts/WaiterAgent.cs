@@ -38,7 +38,9 @@ namespace Assets.Scripts
             startPosition = transform.position;
             startForward = transform.forward;
             world = FindObjectOfType<World>();
+            soundManager = FindObjectOfType<SoundManager>();
         }
+
         private void Update()
         {
             anim.SetFloat("Speed", agent.desiredVelocity.magnitude);

@@ -5,23 +5,27 @@ using Assets.Scripts;
 
 public class Paseando : StateMachineBehaviour
 {
-
-    World world;
     public ClientAgent client;
     bool going;
     public float chance;
     public float checkTime;
     float currentTime;
+    int currentPoint;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        world = FindObjectOfType<World>();
-        going = (0.5 < Random.Range(0, 1));
+        going = (0.4 < Random.Range(0, 1));
         if (going)
-            client.CalculateNavPos(world.calle[0].transform.position);
+        {
+            currentPoint = 0;
+            client.CalculateNavPos(client.world.calle[currentPoint].position);
+        }
         else
-            client.CalculateNavPos(world.calle[1].transform.position);
+        {
+            currentPoint = client.world.calle.Count-1;
+            client.CalculateNavPos(client.world.calle[currentPoint].position);
+        }
 
         currentTime = Random.Range(0, checkTime);
     }
@@ -33,18 +37,19 @@ public class Paseando : StateMachineBehaviour
         if (currentTime>=checkTime)
         {
             currentTime = 0;
-            if (Random.Range(0, 1) < chance && !world.cola[world.cola.Count - 1].ocupado)
+            if (Random.Range(0, 1) < chance && client.world.genteEnCola<client.world.cola.Count)
             {
+                client.world.genteEnCola++;
                 animator.SetTrigger("HacerCola");
             }
         }
         if (client.agent.remainingDistance <= client.agent.stoppingDistance && !client.agent.isStopped)
         {
-            going = !going;
-            if (going)
-                client.CalculateNavPos(world.calle[0].transform.position);
-            else
-                client.CalculateNavPos(world.calle[1].transform.position);
+            System.Random r = new System.Random();
+            currentPoint = currentPoint + r.Next(1, client.world.calle.Count - 1);
+            currentPoint = currentPoint % client.world.calle.Count;
+            client.CalculateNavPos(client.world.calle[currentPoint].position);
+
         }
     }
 

@@ -8,8 +8,7 @@ public class Mesa : MonoBehaviour {
     {
         Libre,
         Ocupada,
-        Sucia,
-        Limpia
+        Sucia
     }
 
     public Estado estadoActual = Estado.Libre;

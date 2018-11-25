@@ -15,12 +15,14 @@ public class World : MonoBehaviour {
     public List<StandardAgent> limpieza;
 
     public List<Mesa> mesas;
-    public List<CheckPoint> cola;
+    public List<QeuePoint> cola;
+    public int genteEnCola;
     public List<CheckPoint> barraPedidos;
     public List<Encimera> barraComida;
-    public List<CheckPoint> calle;
+    public List<Transform> calle;
 
     public SoundManager soundManager;
+    public int genteDentro;
 
     public void Start()
     {
@@ -33,17 +35,19 @@ public class World : MonoBehaviour {
         };
 
         soundManager.Play("AmbienteCiudad");
+        soundManager.Play("AmbienteGente");
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Task t = new Task("Pedido",mesas[x].gameObject,null,Task.Receptor.Camarero);
-            camareros[0].Notify(t);
-            camareros = camareros.OrderBy(n => n.taskNumber).ToList<StandardAgent>();
+            Task t = new Task("Sentarse",mesas[x].gameObject,null,Task.Receptor.Cliente,mesas[x].gameObject);
+            cola[0].cliente.Notify(t);
             x = (x + 1) % mesas.Count;
         }
+
+        soundManager.ChangeVolume("AmbienteGente", (float)genteDentro / (float)mesas.Count);
     }
 
     public void Notify(Task tarea)

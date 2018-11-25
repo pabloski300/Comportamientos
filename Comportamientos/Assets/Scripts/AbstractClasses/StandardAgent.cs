@@ -48,6 +48,10 @@ namespace Assets.Scripts.AbstractClasses
         /// </summary>
         public void Completed()
         {
+            if(currentTask != null)
+            {
+                taskNumber--;
+            }
             if (taskList.Count > 0)
             {
                 currentTask = taskList[0];
@@ -57,7 +61,6 @@ namespace Assets.Scripts.AbstractClasses
             {
                 currentTask = null;
             }
-            taskNumber--;
         }
 
 
@@ -70,11 +73,19 @@ namespace Assets.Scripts.AbstractClasses
         public bool CalculateNavPos(Vector3 pos)
         {
             NavMeshHit navPos;
-            if (NavMesh.SamplePosition(pos, out navPos, 100, -1))
+            if (NavMesh.SamplePosition(pos, out navPos, 10000, -1))
             {
                 agent.isStopped = false;
-                agent.SetDestination(navPos.position);
-                return true;
+                if (agent.SetDestination(navPos.position))
+                {
+                    Debug.Log("true");
+                    return true;
+                }
+                else
+                {
+                    Debug.Log("false");
+                    return false;
+                }
             }
             else
             {

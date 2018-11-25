@@ -15,6 +15,7 @@ namespace Assets.Scripts
         EntregarPedido entregarPedidoState;
         RecogerComida recogerComidaState;
         EntregarComida entregarComidaState;
+        Cobrar cobrarState;
 
         public Transform coger;
         public Transform centroBandeja;
@@ -35,6 +36,8 @@ namespace Assets.Scripts
             recogerComidaState.waiter = this;
             entregarComidaState = anim.GetBehaviour<EntregarComida>();
             entregarComidaState.waiter = this;
+            cobrarState = anim.GetBehaviour<Cobrar>();
+            cobrarState.waiter = this;
             startPosition = transform.position;
             startForward = transform.forward;
             world = FindObjectOfType<World>();

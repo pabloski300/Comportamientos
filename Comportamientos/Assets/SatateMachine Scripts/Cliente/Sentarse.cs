@@ -9,15 +9,27 @@ public class Sentarse : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        client.CalculateNavPos(client.currentTask.Coordinates.transform.position);
         client.mesa = client.currentTask.extraInfo.GetComponent<Mesa>();
+        client.agent.isStopped = false;
+        client.world.genteEnCola--;
+        client.CalculateNavPos(client.mesa.asiento.position);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	    if(client.agent.remainingDistance <= client.agent.stoppingDistance && !client.agent.isStopped)
         {
+            client.world.genteDentro++;
+            client.agent.isStopped = true;
             client.Completed();
+        }
+        else if (client.agent.isStopped)
+        {
+            client.agent.enabled = false;
+            client.mesa.estadoActual = Mesa.Estado.Ocupada;
+            client.transform.position = client.mesa.asiento.transform.position;
+            client.transform.rotation = client.mesa.asiento.transform.rotation;
+            animator.SetBool("Sentado", true);
             animator.SetTrigger("PedirComida");
         }
 	}

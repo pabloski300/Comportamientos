@@ -10,15 +10,18 @@ public class Irse : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        world = FindObjectOfType<World>();
-        client.CalculateNavPos(client.currentTask.Coordinates.transform.position);
+        animator.SetBool("Sentado", false);
+        client.agent.enabled = true;
+        client.agent.isStopped = false;
+        client.CalculateNavPos(client.world.calle[0].transform.position);
+        client.world.genteDentro--;
+
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (client.agent.remainingDistance <= client.agent.stoppingDistance && !client.agent.isStopped)
         {
-            client.Completed();
             animator.SetTrigger("Paseando");
         }
     }

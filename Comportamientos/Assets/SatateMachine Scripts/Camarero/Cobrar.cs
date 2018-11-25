@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.AbstractClasses;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class Cobrar : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         looking = 0;
         cobrando = false;
-        if (!waiter.CalculateNavPos(waiter.currentTask.extraInfo.transform.position))
+
+        if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates.transform.position))
         {
             animator.SetTrigger("Idle");
         }
@@ -28,21 +30,22 @@ public class Cobrar : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && looking < 1)
         {
-            Vector3 look = waiter.currentTask.extraInfo.transform.position - waiter.transform.position;
+            Vector3 look = waiter.currentTask.Coordinates.transform.position - waiter.transform.position;
             waiter.LookAt(look, looking);
             looking += Time.deltaTime;
         }
         else if (waiter.agent.isStopped && looking >= 1 && !cobrando)
         {
-            waiter.soundManager.Play("ClentePagar");
-            animator.SetTrigger("Cobrar");
+            waiter.soundManager.Play("ClientePagar");
+            animator.SetTrigger("Interaccion");
             Debug.Log("Cobrando");
             cobrando = true;
         }
         else if (waiter.agent.isStopped && looking >= 1 && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             animator.SetTrigger("Idle");
-            animator.SetTrigger("FinCobrar");
+            animator.SetTrigger("FinInteraccion");
+            waiter.currentTask.Emisor.GetComponent<StandardAgent>().anim.SetTrigger("Irse");
         }
     }
 

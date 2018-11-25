@@ -8,6 +8,7 @@ namespace Assets.Scripts
 {
     public class ClientAgent : StandardAgent
     {
+        public bool esperando;
 
         //Estados:
         Paseando paseando;
@@ -22,6 +23,7 @@ namespace Assets.Scripts
         // Use this for initialization
         void Start()
         {
+            taskList = new List<Task>();
             anim = GetComponent<Animator>();
             paseando = anim.GetBehaviour<Paseando>();
             hacerCola = anim.GetBehaviour<HacerCola>();
@@ -37,12 +39,21 @@ namespace Assets.Scripts
             comer.client = this;
             pedirCuenta.client = this;
             irse.client = this;
+            world = FindObjectOfType<World>();
+            soundManager = FindObjectOfType<SoundManager>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
+            if (agent.isActiveAndEnabled)
+            {
+                anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
+            }
+            else
+            {
+                anim.SetFloat("Speed", 0);
+            }
         }
     }
 }

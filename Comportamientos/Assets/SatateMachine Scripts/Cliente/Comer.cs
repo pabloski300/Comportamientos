@@ -15,16 +15,21 @@ public class Comer : StateMachineBehaviour {
     {
         startTime = Time.time;
         Timer = 0;
+        animator.SetTrigger("Come");
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Timer += Time.deltaTime;
-        if(Timer>=eatingTime)
+        if(Timer>=eatingTime && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            client.Completed();
             animator.SetTrigger("PedirCuenta");
+            animator.SetTrigger("FinCome");
+        }
+        else if(!animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            animator.SetTrigger("Come");
         }
 	}
 

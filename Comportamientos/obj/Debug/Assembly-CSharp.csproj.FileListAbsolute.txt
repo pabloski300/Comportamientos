@@ -83,7 +83,6 @@ D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.WindModul
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.XRModule.dll
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityScript.dll
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityScript.Lang.dll
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.dll
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Unity.Cecil.dll
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Unity.SerializationLogic.dll
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Unity.DataContract.dll
@@ -164,7 +163,6 @@ D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.XRModule.
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.UI.xml
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.Timeline.xml
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.Networking.xml
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.xml
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.HoloLens.xml
 D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\UnityEngine.SpatialTracking.xml

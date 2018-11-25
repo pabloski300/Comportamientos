@@ -8,11 +8,13 @@ public class RecogerPedido : StateMachineBehaviour {
 
     public WaiterAgent waiter;
     int times;
+    bool cogiendo;
+    float looking;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         times = 0;
-
+        cogiendo = false;
         if (!waiter.CalculateNavPos(waiter.currentTask.Coordinates.transform.position))
         {
             animator.SetTrigger("Entregar");
@@ -22,11 +24,22 @@ public class RecogerPedido : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
+        {            
+            waiter.agent.isStopped = true;
+            Debug.Log("Recogiendo");
+        }
+        else if (waiter.agent.isStopped && looking < 1)
+        {
+            Vector3 look = waiter.currentTask.Emisor.transform.position - waiter.transform.position;
+            waiter.LookAt(look, looking);
+            looking += Time.deltaTime;
+        }
+        else if (waiter.agent.isStopped && looking >= 1 && !cogiendo)
         {
             System.Random r = new System.Random();
+            cogiendo = true;
             int x = r.Next(1, 5);
-            waiter.soundManager.Play("InteraccionM" + x);
-            waiter.agent.isStopped = true;
+            waiter.soundManager.Play("InteraccionF" + x);
             Debug.Log("Recogiendo");
             animator.SetTrigger("Interaccion");
         }
@@ -41,7 +54,7 @@ public class RecogerPedido : StateMachineBehaviour {
             {
                 System.Random r = new System.Random();
                 int x = r.Next(1, 5);
-                waiter.soundManager.Play("InteraccionM" + x);
+                waiter.soundManager.Play("InteraccionF" + x);
                 animator.SetTrigger("Interaccion");
                 times++;
             }

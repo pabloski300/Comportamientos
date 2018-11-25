@@ -8,12 +8,15 @@ public class IdleWaiter : StateMachineBehaviour {
 
     public WaiterAgent waiter;
     float looking;
+    float time;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        time = 0;
         looking = 0;
         waiter.Completed();
-        
+        waiter.agent.isStopped = false;
+
         if (!waiter.CalculateNavPos(waiter.startPosition))
         {
             animator.SetTrigger("Idle");
@@ -22,19 +25,26 @@ public class IdleWaiter : StateMachineBehaviour {
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
+        if (time <= 0.1f)
         {
-            waiter.agent.isStopped = true;
-            Debug.Log("Parado");
+            if (Vector3.Distance(waiter.transform.position,waiter.startPosition) <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
+            {
+                waiter.agent.isStopped = true;
+                Debug.Log("Parado");
+            }
+            else if (waiter.agent.isStopped && looking < 1)
+            {
+                waiter.LookAt(waiter.startForward, looking);
+                looking += Time.deltaTime;
+            }
+            else if (waiter.currentTask != null)
+            {
+                animator.SetTrigger(waiter.currentTask.Id);
+            }
         }
-        else if (waiter.agent.isStopped && looking < 1)
+        else
         {
-            waiter.LookAt(waiter.startForward, looking);
-            looking += Time.deltaTime;
-        }
-        else if (waiter.currentTask != null)
-        {
-            animator.SetTrigger(waiter.currentTask.Id);
+            time += Time.deltaTime;
         }
     }
 

@@ -381,10 +381,6 @@ D:\Unity\ComportamientosUni\Comportamientos\obj\Debug\NavMeshComponentsExamples.
 D:\Unity\ComportamientosUni\Comportamientos\obj\Debug\NavMeshComponentsExamples.csproj.CopyComplete
 D:\Unity\ComportamientosUni\Comportamientos\obj\Debug\NavMeshComponentsExamples.dll
 D:\Unity\ComportamientosUni\Comportamientos\obj\Debug\NavMeshComponentsExamples.pdb
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.dll
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.dll
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.xml
-D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.xml
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\Temp\bin\Debug\NavMeshComponentsExamples.dll
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\Temp\bin\Debug\NavMeshComponentsExamples.pdb
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\Temp\bin\Debug\Boo.Lang.dll

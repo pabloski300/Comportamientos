@@ -31,7 +31,7 @@ public class EntregarComida : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && looking < 1)
         {
-            Vector3 look = waiter.currentTask.extraInfo.transform.position - waiter.transform.position;
+            Vector3 look = waiter.currentTask.extraInfo.GetComponent<ClientAgent>().mesa.GetComponent<Mesa>().posicionPlato.transform.position - waiter.transform.position;
             waiter.LookAt(look, looking);
             looking += Time.deltaTime;
         }
@@ -43,9 +43,10 @@ public class EntregarComida : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            waiter.plato.transform.parent = waiter.currentTask.extraInfo.GetComponent<Mesa>().posicionPlato;
+            waiter.plato.transform.parent = waiter.currentTask.extraInfo.GetComponent<ClientAgent>().mesa.GetComponent<Mesa>().posicionPlato;
             waiter.plato.transform.localPosition = Vector3.zero;
             waiter.plato.transform.localRotation = Quaternion.Euler(-90, 0, 0);
+            waiter.currentTask.extraInfo.GetComponent<StandardAgent>().anim.SetTrigger("Comer");
             //waiter.currentTask.extraInfo.GetComponent<StandardAgent>().Notify(new Task("Comer",waiter.plato,waiter,Task.Receptor.Cliente));
             waiter.plato = null;
             animator.SetTrigger("Idle");

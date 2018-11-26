@@ -35,7 +35,7 @@ public class EntregarPedido : StateMachineBehaviour
 
         for (int i = 1; i < waiter.world.barraPedidos.Count; i++)
         {
-            if (Vector3.Distance(waiter.transform.position, waiter.world.barraPedidos[i].transform.position) < d && !waiter.world.barraPedidos[i].ocupado)
+            if (Vector3.Distance(waiter.transform.position, waiter.agent.destination) < d && !waiter.world.barraPedidos[i].ocupado)
             {
                 v = waiter.world.barraPedidos[i].transform.position;
                 d = Vector3.Distance(waiter.transform.position, v);
@@ -49,7 +49,7 @@ public class EntregarPedido : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
+        if (Vector3.Distance(waiter.transform.position, waiter.agent.destination) <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
             waiter.agent.isStopped = true;
         }

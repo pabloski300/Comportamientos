@@ -17,7 +17,7 @@ public class Sentarse : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	    if(client.agent.remainingDistance <= client.agent.stoppingDistance && !client.agent.isStopped)
+	    if(Vector3.Distance(client.transform.position, client.agent.destination) <= client.agent.stoppingDistance && !client.agent.isStopped)
         {
             client.world.genteDentro++;
             client.agent.isStopped = true;

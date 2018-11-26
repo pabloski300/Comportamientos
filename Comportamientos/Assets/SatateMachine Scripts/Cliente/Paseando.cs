@@ -43,7 +43,7 @@ public class Paseando : StateMachineBehaviour
                 animator.SetTrigger("HacerCola");
             }
         }
-        if (client.agent.remainingDistance <= client.agent.stoppingDistance && !client.agent.isStopped)
+        if (Vector3.Distance(client.transform.position, client.agent.destination) <= client.agent.stoppingDistance && !client.agent.isStopped)
         {
             System.Random r = new System.Random();
             currentPoint = currentPoint + r.Next(1, client.world.calle.Count - 1);

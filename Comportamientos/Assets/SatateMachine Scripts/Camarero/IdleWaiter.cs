@@ -4,18 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class IdleWaiter : StateMachineBehaviour {
+public class IdleWaiter : StateMachineBehaviour
+{
 
     public WaiterAgent waiter;
     float looking;
     float time;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
         time = 0;
         looking = 0;
         waiter.Completed();
-        waiter.agent.isStopped = false;
 
         if (!waiter.CalculateNavPos(waiter.startPosition))
         {
@@ -24,28 +25,23 @@ public class IdleWaiter : StateMachineBehaviour {
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (time <= 0.1f)
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (Vector3.Distance(waiter.transform.position, waiter.agent.destination) <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
-            if (Vector3.Distance(waiter.transform.position,waiter.startPosition) <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
-            {
-                waiter.agent.isStopped = true;
-                Debug.Log("Parado");
-            }
-            else if (waiter.agent.isStopped && looking < 1)
-            {
-                waiter.LookAt(waiter.startForward, looking);
-                looking += Time.deltaTime;
-            }
-            else if (waiter.currentTask != null)
-            {
-                animator.SetTrigger(waiter.currentTask.Id);
-            }
+            waiter.agent.isStopped = true;
+            Debug.Log("Parado");
         }
-        else
+        else if (waiter.agent.isStopped && looking < 1)
         {
-            time += Time.deltaTime;
+            waiter.LookAt(waiter.startForward, looking);
+            looking += Time.deltaTime;
         }
+        else if (waiter.currentTask != null)
+        {
+            animator.SetTrigger(waiter.currentTask.Id);
+        }
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

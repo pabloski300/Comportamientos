@@ -40,7 +40,7 @@ public class Cocinar : StateMachineBehaviour {
     /// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (cooker.agent.remainingDistance <= cooker.agent.stoppingDistance && !cooker.agent.isStopped)
+        if (Vector3.Distance(cooker.transform.position, cooker.agent.destination) <= cooker.agent.stoppingDistance && !cooker.agent.isStopped)
         {
             cooker.agent.isStopped = true;
         }

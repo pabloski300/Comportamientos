@@ -13,7 +13,6 @@ public class EntregarComida : StateMachineBehaviour {
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        waiter.agent.isStopped = false;
         looking = 0;
         dejando = false;
         
@@ -25,7 +24,7 @@ public class EntregarComida : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (waiter.agent.remainingDistance <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
+        if (Vector3.Distance(waiter.transform.position, waiter.agent.destination) <= waiter.agent.stoppingDistance && !waiter.agent.isStopped)
         {
             waiter.agent.isStopped = true;
         }

@@ -390,3 +390,7 @@ C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\obj\Debug\NavMe
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\obj\Debug\NavMeshComponentsEditor.csproj.CopyComplete
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\obj\Debug\NavMeshComponentsEditor.dll
 C:\Users\shadow\Documents\GitHub\Comportamientos\Comportamientos\obj\Debug\NavMeshComponentsEditor.pdb
+D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.dll
+D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.dll
+D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.xml
+D:\Unity\ComportamientosUni\Comportamientos\Temp\bin\Debug\Vuforia.UnityExtensions.xml

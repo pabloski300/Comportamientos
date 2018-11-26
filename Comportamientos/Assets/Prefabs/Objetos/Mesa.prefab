@@ -565,6 +565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0eb4c7cbc1e04c4395f81b1d5acc7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botellas: []
   estadoActual: 0
+  platoPrefab: {fileID: 0}
   posicionPlato: {fileID: 4514100281688482}
   asiento: {fileID: 4839746145434056}
+  limpia: {fileID: 0}
+  sucia: {fileID: 0}
+  renderer: {fileID: 0}

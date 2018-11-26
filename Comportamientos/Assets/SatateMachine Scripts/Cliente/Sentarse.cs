@@ -30,6 +30,7 @@ public class Sentarse : StateMachineBehaviour {
             client.transform.position = client.mesa.asiento.transform.position;
             client.transform.rotation = client.mesa.asiento.transform.rotation;
             animator.SetBool("Sentado", true);
+            client.mesa.ChangeState(Mesa.Estado.Ocupada);
             animator.SetTrigger("PedirComida");
         }
 	}

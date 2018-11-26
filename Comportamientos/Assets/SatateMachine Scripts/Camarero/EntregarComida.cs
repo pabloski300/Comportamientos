@@ -43,6 +43,7 @@ public class EntregarComida : StateMachineBehaviour {
         else if (waiter.agent.isStopped && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             waiter.plato.transform.parent = waiter.currentTask.extraInfo.GetComponent<ClientAgent>().mesa.GetComponent<Mesa>().posicionPlato;
+            waiter.currentTask.extraInfo.GetComponent<ClientAgent>().mesa.GetComponent<Mesa>().platoPrefab = waiter.plato;
             waiter.plato.transform.localPosition = Vector3.zero;
             waiter.plato.transform.localRotation = Quaternion.Euler(-90, 0, 0);
             waiter.currentTask.extraInfo.GetComponent<StandardAgent>().anim.SetTrigger("Comer");

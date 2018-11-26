@@ -26,6 +26,7 @@ public class Comer : StateMachineBehaviour {
         {
             animator.SetTrigger("PedirCuenta");
             animator.SetTrigger("FinCome");
+            client.mesa.ChangeState(Mesa.Estado.Sucia);
         }
         else if(!animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {

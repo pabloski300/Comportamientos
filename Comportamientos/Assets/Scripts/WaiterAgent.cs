@@ -20,6 +20,8 @@ namespace Assets.Scripts
         public Transform coger;
         public Transform centroBandeja;
 
+        public GameObject dolar;
+
         public GameObject plato;
 
         // Use this for initialization

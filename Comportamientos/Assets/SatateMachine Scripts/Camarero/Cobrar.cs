@@ -37,12 +37,14 @@ public class Cobrar : StateMachineBehaviour {
         else if (waiter.agent.isStopped && looking >= 1 && !cobrando)
         {
             waiter.soundManager.Play("ClientePagar");
+            waiter.dolar.SetActive(true);
             animator.SetTrigger("Interaccion");
             Debug.Log("Cobrando");
             cobrando = true;
         }
         else if (waiter.agent.isStopped && looking >= 1 && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
+            waiter.dolar.SetActive(false);
             animator.SetTrigger("Idle");
             animator.SetTrigger("FinInteraccion");
             waiter.currentTask.Emisor.GetComponent<StandardAgent>().anim.SetTrigger("Irse");

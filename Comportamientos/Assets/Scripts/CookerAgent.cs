@@ -18,6 +18,7 @@ public class CookerAgent : StandardAgent {
     public GameObject fregadero;
     public GameObject tabla;
     public GameObject sarten;
+    public GameObject humo;
 
     //Estados
     IdleCooker idleState;

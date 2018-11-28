@@ -13,7 +13,7 @@ public class Irse : StateMachineBehaviour {
         animator.SetBool("Sentado", false);
         client.agent.enabled = true;
         client.agent.isStopped = false;
-        client.CalculateNavPos(client.world.calle[0].transform.position);
+        client.CalculateNavPos(client.world.calle[4].transform.position);
         client.world.genteDentro--;
 
 	}

@@ -7,6 +7,7 @@ public class Mesa : MonoBehaviour {
     public enum Estado
     {
         Libre,
+        Seleccionada,
         Ocupada,
         Sucia
     }
@@ -35,23 +36,31 @@ public class Mesa : MonoBehaviour {
         switch (e)
         {
             case Estado.Libre:
+                estadoActual = Estado.Libre;
                 renderer.material = limpia;
                 foreach (Decoration g in botellas)
                 {
                     g.gameObject.SetActive(false);
                 }
                 break;
+            case Estado.Seleccionada:
+                estadoActual = Estado.Seleccionada;
+                break;
             case Estado.Ocupada:
+                estadoActual = Estado.Ocupada;
                 foreach (Decoration g in botellas)
                 {
                     g.gameObject.SetActive(true);
                 }
                 break;
             case Estado.Sucia:
+                estadoActual = Estado.Sucia;
                 renderer.material = sucia;
                 GameObject p = platoPrefab;
                 Destroy(p);
                     break;
+            default:
+                break;
         }
     }
 }

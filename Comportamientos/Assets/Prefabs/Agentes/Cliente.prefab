@@ -401,7 +401,6 @@ GameObject:
   - component: {fileID: 4929914539554798}
   - component: {fileID: 95966949110919584}
   - component: {fileID: 195125173196955394}
-  - component: {fileID: 114929750322976748}
   - component: {fileID: 114111432724673440}
   - component: {fileID: 54104304134318170}
   - component: {fileID: 136275840550515250}
@@ -1171,7 +1170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783416435954008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.33, y: 0, z: 11.92}
+  m_LocalPosition: {x: -11.58, y: -0.19, z: 28.01}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4008710189065554}
@@ -1269,17 +1268,6 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   esperando: 0
   mesa: {fileID: 0}
---- !u!114 &114929750322976748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1783416435954008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114934966939699366
 MonoBehaviour:
   m_ObjectHideFlags: 1

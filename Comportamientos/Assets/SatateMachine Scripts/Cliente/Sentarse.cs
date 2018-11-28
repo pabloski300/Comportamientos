@@ -26,7 +26,6 @@ public class Sentarse : StateMachineBehaviour {
         else if (client.agent.isStopped)
         {
             client.agent.enabled = false;
-            client.mesa.estadoActual = Mesa.Estado.Ocupada;
             client.transform.position = client.mesa.asiento.transform.position;
             client.transform.rotation = client.mesa.asiento.transform.rotation;
             animator.SetBool("Sentado", true);

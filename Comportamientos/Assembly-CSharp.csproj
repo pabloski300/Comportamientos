@@ -82,13 +82,17 @@
     <Compile Include="Assets\SatateMachine Scripts\Cocinero\IdleCooker.cs" />
     <Compile Include="Assets\SatateMachine Scripts\Limpiador\Barrer.cs" />
     <Compile Include="Assets\SatateMachine Scripts\Limpiador\LimpiarMesa.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Maitre\Acompañar.cs" />
+    <Compile Include="Assets\SatateMachine Scripts\Maitre\Recibir.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\AbstractClasses\StandardAgent.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\CleanerAgent.cs" />
     <Compile Include="Assets\Scripts\ClientAgent.cs" />
     <Compile Include="Assets\Scripts\CookerAgent.cs" />
     <Compile Include="Assets\Scripts\Decoration.cs" />
     <Compile Include="Assets\Scripts\Encimera.cs" />
+    <Compile Include="Assets\Scripts\MaitreAgent.cs" />
     <Compile Include="Assets\Scripts\Mesa.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
     <Compile Include="Assets\Scripts\QeuePoint.cs" />

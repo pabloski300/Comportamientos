@@ -29,6 +29,7 @@ public class LimpiarMesa : StateMachineBehaviour {
             if(currentTime>=cleanTime)
             {
                 cleaner.currentTask.Coordinates.GetComponent<Mesa>().ChangeState(Mesa.Estado.Libre);
+                cleaner.world.mesasDisponibles++;
                 cleaner.world.Notify(new Task("MesaLibre", cleaner.currentTask.Coordinates, cleaner, Task.Receptor.Maitre));
                 cleaner.Completed();
                 cleaner.CalculateNavPos(cleaner.startPosition);

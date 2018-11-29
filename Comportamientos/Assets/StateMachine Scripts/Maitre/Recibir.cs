@@ -22,9 +22,10 @@ public class Recibir : StateMachineBehaviour {
                 maitre.world.cola[0].cliente.Notify(new Task("Sentarse", maitre.currentTask.Coordinates, maitre, Task.Receptor.Cliente));
                 maitre.CalculateNavPos(maitre.currentTask.Coordinates.transform.position);
                 maitre.currentTask.Coordinates.GetComponent<Mesa>().ChangeState(Mesa.Estado.Seleccionada);
+                maitre.world.mesasDisponibles--;
                 animator.SetTrigger("Acompañar");
             }
-            else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.genteDentro<maitre.world.mesas.Count)
+            else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.mesasDisponibles>0)
             {
                 int count = 0;
                 while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre)
@@ -32,6 +33,7 @@ public class Recibir : StateMachineBehaviour {
                 maitre.currentTask.Emisor.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
                 maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
                 maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                maitre.world.mesasDisponibles--;
                 animator.SetTrigger("Acompañar");
             }
             maitre.Completed();

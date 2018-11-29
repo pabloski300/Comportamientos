@@ -13,6 +13,7 @@ public class HacerCola : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         actualPos = 0;
         client.esperando = false;
+        client.hasAsked = false;
         checkColaFirst();
     }
 
@@ -26,7 +27,12 @@ public class HacerCola : StateMachineBehaviour {
         {
             cola.ocupado = false;
             animator.SetTrigger(client.currentTask.Id);
-        } 
+        }
+        else if(client.esperando && (Vector3.Distance(client.transform.position, client.agent.destination) <= client.agent.stoppingDistance && !client.agent.isStopped) && !client.hasAsked)
+        {
+            client.world.Notify(new Task("ClienteEsperando", client.gameObject, client, Task.Receptor.Maitre));
+            client.hasAsked = true;
+        }
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -71,7 +77,6 @@ public class HacerCola : StateMachineBehaviour {
         else
         {
             client.esperando = true;
-            client.world.Notify(new Task("ClienteEsperando", client.gameObject, client, Task.Receptor.Maitre));
         }
     }
 

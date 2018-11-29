@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class QeuePoint : MonoBehaviour {
     public bool ocupado = false;
-    public StandardAgent cliente;
+    public ClientAgent cliente;
 }

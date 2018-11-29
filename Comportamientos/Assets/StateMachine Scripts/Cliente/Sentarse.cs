@@ -9,7 +9,7 @@ public class Sentarse : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        client.mesa = client.currentTask.extraInfo.GetComponent<Mesa>();
+        client.mesa = client.currentTask.Coordinates.GetComponent<Mesa>();
         client.agent.isStopped = false;
         client.world.genteEnCola--;
         client.CalculateNavPos(client.mesa.asiento.position);

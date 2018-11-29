@@ -5,16 +5,28 @@ using UnityEngine;
 public class Acompañar : StateMachineBehaviour {
 
     public MaitreAgent maitre;
+    bool back;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        back = false;
+	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if(back && Vector3.Distance(maitre.transform.position, maitre.agent.destination) <= maitre.agent.stoppingDistance && !maitre.agent.isStopped)
+        {
+            animator.SetTrigger("Recibir");
+        }
+        else if (Vector3.Distance(maitre.transform.position, maitre.agent.destination) <= maitre.agent.stoppingDistance && !maitre.agent.isStopped)
+        {
+            //maitre.Completed();
+            maitre.CalculateNavPos(maitre.startPosition);
+            back = true;
+        }
+
+    }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

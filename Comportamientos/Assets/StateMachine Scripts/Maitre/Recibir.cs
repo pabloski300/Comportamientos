@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class Recibir : StateMachineBehaviour {
 
@@ -16,16 +17,24 @@ public class Recibir : StateMachineBehaviour {
     {
 	    if(maitre.taskNumber!=0)
         {
-            if(maitre.currentTask.Id== "MesaLibre" && maitre.world.cola[0].ocupado)
+            if(maitre.currentTask.Id== "MesaLibre" && maitre.world.cola[0].ocupado && !maitre.world.cola[0].cliente.hasAsked)
             {
-                int count = 0;
-                while (count < maitre.world.mesas.Count || maitre.world.mesas[count].estadoActual == Mesa.Estado.Libre)
-                    count++;
+                maitre.world.cola[0].cliente.Notify(new Task("Sentarse", maitre.currentTask.Coordinates, maitre, Task.Receptor.Cliente));
+                maitre.CalculateNavPos(maitre.currentTask.Coordinates.transform.position);
+                maitre.currentTask.Coordinates.GetComponent<Mesa>().ChangeState(Mesa.Estado.Seleccionada);
+                animator.SetTrigger("Acompañar");
             }
             else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.genteDentro<maitre.world.mesas.Count)
             {
-
+                int count = 0;
+                while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre)
+                    count++;
+                maitre.currentTask.Emisor.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
+                maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
+                maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                animator.SetTrigger("Acompañar");
             }
+            maitre.Completed();
         }
 	}
 

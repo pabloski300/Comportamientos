@@ -9,6 +9,7 @@ namespace Assets.Scripts
     public class ClientAgent : StandardAgent
     {
         public bool esperando;
+        public bool hasAsked;
 
         //Estados:
         Paseando paseando;

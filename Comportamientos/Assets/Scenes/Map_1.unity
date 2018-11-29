@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2796,6 +2796,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341299539}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &344605725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114862410494713878, guid: a6e23fbafc295e141bcd1400ee3aeeaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 806625934}
+  m_Script: {fileID: 11500000, guid: 3334b5b4bb9a57244b5ec9daf05ef451, type: 3}
 --- !u!1001 &348619554
 Prefab:
   m_ObjectHideFlags: 0
@@ -5701,6 +5707,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0401553105c6c34fb23a0a348699e67, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &773958160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114976038583144472, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2141612183}
+  m_Script: {fileID: 11500000, guid: 32607722f181c6f43aeffceb51fa59e0, type: 3}
 --- !u!1001 &774889386
 Prefab:
   m_ObjectHideFlags: 0
@@ -8350,6 +8362,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049c140df6ec5e04aa68ad64fec18c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1140980071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114004641084403200, guid: 84852ddcfbe5f2b4cafd10fb07735f27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1763162958}
+  m_Script: {fileID: 11500000, guid: 29bdaf108e6069142b5a75fe8d294633, type: 3}
 --- !u!1 &1145847273
 GameObject:
   m_ObjectHideFlags: 0
@@ -9760,13 +9778,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
-      propertyPath: cocineros.Array.size
+      propertyPath: maitre.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
-      propertyPath: camareros.Array.size
+      propertyPath: limpieza.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: cocineros.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: camareros.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
@@ -9950,6 +9978,31 @@ Prefab:
       propertyPath: calle.Array.data[4]
       value: 
       objectReference: {fileID: 1614785373}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: maitre.Array.data[0]
+      value: 
+      objectReference: {fileID: 1311880627}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: limpieza.Array.data[0]
+      value: 
+      objectReference: {fileID: 344605725}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: camareros.Array.data[1]
+      value: 
+      objectReference: {fileID: 1140980071}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: camareros.Array.data[2]
+      value: 
+      objectReference: {fileID: 1745905511}
+    - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
+        type: 2}
+      propertyPath: cocineros.Array.data[1]
+      value: 
+      objectReference: {fileID: 773958160}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a946de2054b5d4c9f752d3d544341f, type: 2}
   m_IsPrefabAsset: 0
@@ -13780,6 +13833,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdbdec50a7fc7e3479dea523470f4c76, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1745905511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114004641084403200, guid: 84852ddcfbe5f2b4cafd10fb07735f27,
+    type: 2}
+  m_PrefabInternal: {fileID: 386579038}
+  m_Script: {fileID: 11500000, guid: 29bdaf108e6069142b5a75fe8d294633, type: 3}
 --- !u!23 &1751670186 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23983482685170634, guid: ac3cec28cbf71374e9aa4bf34270fe61,

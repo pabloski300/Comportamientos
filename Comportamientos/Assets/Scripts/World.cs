@@ -23,6 +23,7 @@ public class World : MonoBehaviour {
 
     public SoundManager soundManager;
     public int genteDentro;
+    public int mesasDisponibles;
 
     public void Start()
     {
@@ -36,6 +37,7 @@ public class World : MonoBehaviour {
 
         soundManager.Play("AmbienteCiudad");
         soundManager.Play("AmbienteGente");
+        mesasDisponibles = mesas.Count;
     }
 
     public void Update()

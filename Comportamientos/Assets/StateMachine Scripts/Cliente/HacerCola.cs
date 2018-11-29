@@ -71,6 +71,7 @@ public class HacerCola : StateMachineBehaviour {
         else
         {
             client.esperando = true;
+            client.world.Notify(new Task("ClienteEsperando", client.gameObject, client, Task.Receptor.Maitre));
         }
     }
 

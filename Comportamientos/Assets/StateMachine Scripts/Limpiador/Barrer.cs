@@ -5,17 +5,25 @@ using UnityEngine;
 public class Barrer : StateMachineBehaviour {
 
     public CleanerAgent cleaner;
+    bool activo;
 
-	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        cleaner.escoba.SetActive(false);
+        activo = false;
+    }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	    if(cleaner.taskNumber!=0)
         {
+            cleaner.escoba.SetActive(false);
             animator.SetTrigger("LimpiarMesa");
+        }
+        if (!activo)
+        {
+            cleaner.soundManager.Play("Barrer");
+            activo = true;
         }
 	}
 

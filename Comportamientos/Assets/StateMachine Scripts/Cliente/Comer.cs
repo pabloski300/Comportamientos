@@ -16,6 +16,7 @@ public class Comer : StateMachineBehaviour {
         startTime = Time.time;
         Timer = 0;
         animator.SetTrigger("Come");
+        client.soundManager.Play("ClienteComer");
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,6 +31,7 @@ public class Comer : StateMachineBehaviour {
         }
         else if(!animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
+            client.soundManager.Play("ClienteComer");
             animator.SetTrigger("Come");
         }
 	}

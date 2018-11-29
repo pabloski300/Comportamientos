@@ -55,11 +55,11 @@ public class Cocinar : StateMachineBehaviour {
             if(cocinarRandom == 1)
             {
                 cooker.soundManager.Play("CocineroManos");
+                cooker.humo.SetActive(true);
             }
             else
             {
                 cooker.soundManager.Play("CocineroCuchillo");
-                cooker.humo.SetActive(true);
             }
             animator.SetTrigger("Cocinar"+cocinarRandom);
             Debug.Log("Cocinando");

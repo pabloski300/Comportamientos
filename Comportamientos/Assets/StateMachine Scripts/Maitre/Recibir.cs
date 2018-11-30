@@ -17,24 +17,33 @@ public class Recibir : StateMachineBehaviour {
     {
 	    if(maitre.taskNumber!=0)
         {
-            if(maitre.currentTask.Id== "MesaLibre" && maitre.world.cola[0].ocupado && !maitre.world.cola[0].cliente.hasAsked)
+            if(maitre.currentTask.Id== "MesaLibre" && maitre.world.cola[0].ocupado )
             {
-                maitre.world.cola[0].cliente.Notify(new Task("Sentarse", maitre.currentTask.Coordinates, maitre, Task.Receptor.Cliente));
-                maitre.CalculateNavPos(maitre.currentTask.Coordinates.transform.position);
-                maitre.currentTask.Coordinates.GetComponent<Mesa>().ChangeState(Mesa.Estado.Seleccionada);
-                maitre.world.mesasDisponibles--;
-                animator.SetTrigger("Acompañar");
+                int count = 0;
+                while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre && maitre.world.mesasDisponibles>0)
+                    count++;
+                if (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual==Mesa.Estado.Libre)
+                {
+                    maitre.world.cola[0].cliente.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
+                    maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
+                    maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.world.mesasDisponibles--;
+                    animator.SetTrigger("Acompañar");
+                }
             }
-            else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.mesasDisponibles>0)
+            else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.mesasDisponibles>0 && maitre.world.cola[0].cliente==maitre.currentTask.Emisor )
             {
                 int count = 0;
                 while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre)
                     count++;
-                maitre.currentTask.Emisor.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
-                maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
-                maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
-                maitre.world.mesasDisponibles--;
-                animator.SetTrigger("Acompañar");
+                if (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual == Mesa.Estado.Libre)
+                {
+                    maitre.currentTask.Emisor.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
+                    maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
+                    maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.world.mesasDisponibles--;
+                    animator.SetTrigger("Acompañar");
+                }
             }
             maitre.Completed();
         }

@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 4587024199938614}
   - component: {fileID: 95558333286587612}
   - component: {fileID: 195392377281262588}
-  - component: {fileID: 114442449824238662}
+  - component: {fileID: 114880871504249018}
   m_Layer: 0
   m_Name: Maitre
   m_TagString: Untagged
@@ -1018,8 +1018,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214114739300596}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.82, y: 0, z: 8.44}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.48, y: 0.032000005, z: 5.697}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4511322412264604}
@@ -1281,7 +1281,7 @@ Animator:
   m_GameObject: {fileID: 1214114739300596}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 617aebcdcff584540af56a0887fcdb45, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d45b61fa0a4902e4f9d9146487e50b83, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1290,7 +1290,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114442449824238662
+--- !u!114 &114880871504249018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1298,9 +1298,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214114739300596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb911e02df9b0e740a2e2660a29e1aa7, type: 3}
+  m_Script: {fileID: 11500000, guid: e084b1296979a574d9b80ebc5ad774aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 195392377281262588}
+  taskNumber: 0
+  world: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  startForward: {x: 0, y: 0, z: 0}
+  anim: {fileID: 95558333286587612}
+  soundManager: {fileID: 0}
 --- !u!137 &137012229315326722
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1855,7 +1862,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 720
-  m_StoppingDistance: 0.15
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -8,9 +8,10 @@ public class RotateAround : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKey(KeyCode.A))
         {
             transform.RotateAround(Vector3.zero, Vector3.up, 45 * Time.deltaTime);
@@ -18,6 +19,11 @@ public class RotateAround : MonoBehaviour {
         else if (Input.GetKey(KeyCode.D))
         {
             transform.RotateAround(Vector3.zero, Vector3.up, -45 * Time.deltaTime);
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            transform.RotateAround(Vector3.zero, Vector3.up, Input.GetAxis("Mouse X") * 45 * Time.deltaTime);
         }
     }
 }

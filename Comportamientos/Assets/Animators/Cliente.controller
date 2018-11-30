@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   client: {fileID: 0}
-  eatingTime: 2
+  eatingTime: 15
 --- !u!114 &114327143857878436
 MonoBehaviour:
   m_ObjectHideFlags: 1

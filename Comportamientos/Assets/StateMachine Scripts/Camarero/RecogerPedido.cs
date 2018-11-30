@@ -30,7 +30,7 @@ public class RecogerPedido : StateMachineBehaviour {
         }
         else if (waiter.agent.isStopped && looking < 1)
         {
-            Vector3 look = waiter.currentTask.Emisor.transform.position - waiter.transform.position;
+            Vector3 look = waiter.currentTask.Emisor.gameObject.transform.position - waiter.transform.position;
             waiter.LookAt(look, looking);
             looking += Time.deltaTime;
         }

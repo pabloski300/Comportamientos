@@ -60,6 +60,7 @@ public class Cocinar : StateMachineBehaviour {
             else
             {
                 cooker.soundManager.Play("CocineroCuchillo");
+                cooker.cuchilloPrefab.SetActive(true);
             }
             animator.SetTrigger("Cocinar"+cocinarRandom);
             Debug.Log("Cocinando");
@@ -72,6 +73,7 @@ public class Cocinar : StateMachineBehaviour {
                 animator.SetTrigger("Entregar");
                 animator.SetTrigger("FinCocinar");
                 cooker.humo.SetActive(false);
+                cooker.cuchilloPrefab.SetActive(false);
             }
             else
             {

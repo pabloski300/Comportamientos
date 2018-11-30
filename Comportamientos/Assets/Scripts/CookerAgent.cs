@@ -11,7 +11,7 @@ public class CookerAgent : StandardAgent {
     public GameObject platoPrefab;
 
     public Transform cuchilo;
-    public Transform cuchilloPrefab;
+    public GameObject cuchilloPrefab;
 
     public Encimera encimeraSeleccionada;
 

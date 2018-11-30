@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Assets.Scripts.AbstractClasses.StandardAgent" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAAAIARIIAACAAAAAIAAAIABAAQAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\AbstractClasses\StandardAgent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="currentTask" />
+      <Field Name="world" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CleanerAgent" Collapsed="true">
+    <Position X="5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\CleanerAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheckPoint" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CheckPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookerAgent" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAYAQAAAAAAAoAAAAAIAAAAABAAAAAgIBAAEQ=</HashCode>
+      <FileName>Assets\Scripts\CookerAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoration" Collapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Decoration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Encimera" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Encimera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaitreAgent" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAgAAAAAAAAAAAJAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MaitreAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mesa" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAAABAAABAAAAAIAAAAAAAAAAAAIAAAQAAAAgEQ=</HashCode>
+      <FileName>Assets\Scripts\Mesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveTo" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MoveTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QeuePoint" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QeuePoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateAround" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RotateAround.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sound">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAIAAAAAAAAAAAAEAEAgAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager">
+    <Position X="5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAoAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\SoundManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sounds" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="World" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASCAAAAACAAAQAAAACgAAAAEAIAACBAAQBAAEBAAAE=</HashCode>
+      <FileName>Assets\Scripts\World.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="soundManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.ClientAgent" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAADACAAAAAAAAAAAEAAgAAAAAAAIAAgAAAACBA=</HashCode>
+      <FileName>Assets\Scripts\ClientAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.Task" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Task.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.WaiterAgent">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAQgAAgBAAAAAAAAAAACAAAAAAAAAABAoAAAgAAAAEQ=</HashCode>
+      <FileName>Assets\Scripts\WaiterAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

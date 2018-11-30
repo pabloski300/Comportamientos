@@ -27,6 +27,7 @@ public class Recibir : StateMachineBehaviour {
                     maitre.world.cola[0].cliente.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
                     maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
                     maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.mesa = maitre.world.mesas[count].gameObject;
                     maitre.world.mesasDisponibles--;
                     animator.SetTrigger("Acompañar");
                 }
@@ -41,6 +42,7 @@ public class Recibir : StateMachineBehaviour {
                     maitre.currentTask.Emisor.Notify(new Task("Sentarse", maitre.world.mesas[count].gameObject, maitre, Task.Receptor.Cliente));
                     maitre.CalculateNavPos(maitre.world.mesas[count].gameObject.transform.position);
                     maitre.world.mesas[count].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.mesa = maitre.world.mesas[count].gameObject;
                     maitre.world.mesasDisponibles--;
                     animator.SetTrigger("Acompañar");
                 }

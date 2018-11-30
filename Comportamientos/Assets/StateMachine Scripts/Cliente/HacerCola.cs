@@ -8,9 +8,11 @@ public class HacerCola : StateMachineBehaviour {
     public ClientAgent client;
     QeuePoint cola;
     int actualPos;
+    int actualIdle;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        actualIdle = 1;
         actualPos = 0;
         client.esperando = false;
         client.hasAsked = false;
@@ -33,7 +35,29 @@ public class HacerCola : StateMachineBehaviour {
             client.world.Notify(new Task("ClienteEsperando", client.gameObject, client, Task.Receptor.Maitre));
             client.hasAsked = true;
         }
-	}
+
+        if (client.agent.desiredVelocity.magnitude == 0 && !animator.IsInTransition(0) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            System.Random r = new System.Random();
+            float x = (float)r.NextDouble();
+            if(x > 0.8 && x > 0.9 && actualIdle != 2)
+            {
+                actualIdle = 2;
+                animator.SetTrigger(actualIdle.ToString());
+            }
+            else if (x > 0.9 && actualIdle != 3)
+            {
+                actualIdle = 3;
+                animator.SetTrigger(actualIdle.ToString());
+            }
+            else if (x < 0.8 && actualIdle != 1)
+            {
+                actualIdle = 1;
+                animator.SetTrigger(actualIdle.ToString());
+            }
+            
+        }
+    }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

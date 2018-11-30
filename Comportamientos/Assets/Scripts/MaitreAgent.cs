@@ -10,6 +10,8 @@ public class MaitreAgent : StandardAgent {
     Recibir recibirState;
     Acompañar acompañarState;
 
+    public GameObject mesa;
+
     // Use this for initialization
     void Start()
     {

@@ -19,7 +19,26 @@ public class Recibir : StateMachineBehaviour {
         {
             if(maitre.currentTask.Id== "MesaLibre" && maitre.world.cola[0].ocupado )
             {
-                int count = 0;
+                List<Mesa> temp = new List<Mesa>();
+
+                for(int i = 0; i<maitre.world.mesas.Count;i++)
+                {
+                    if (maitre.world.mesas[i].estadoActual == Mesa.Estado.Libre)
+                        temp.Add(maitre.world.mesas[i]);
+                }
+                if(temp.Count>0)
+                {
+                    int index = Random.Range(0, temp.Count);
+                    maitre.world.cola[0].cliente.Notify(new Task("Sentarse", temp[index].gameObject, maitre, Task.Receptor.Cliente));
+                    maitre.CalculateNavPos(temp[index].gameObject.transform.position);
+                    temp[index].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.mesa = temp[index].gameObject;
+                    maitre.world.mesasDisponibles--;
+                    animator.SetTrigger("Acompañar");
+                }
+
+                //
+               /* int count = 0;
                 while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre && maitre.world.mesasDisponibles>0)
                     count++;
                 if (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual==Mesa.Estado.Libre)
@@ -30,11 +49,30 @@ public class Recibir : StateMachineBehaviour {
                     maitre.mesa = maitre.world.mesas[count].gameObject;
                     maitre.world.mesasDisponibles--;
                     animator.SetTrigger("Acompañar");
-                }
+                }*/
             }
             else if(maitre.currentTask.Id == "ClienteEsperando" && maitre.world.mesasDisponibles>0 && maitre.world.cola[0].cliente==maitre.currentTask.Emisor )
             {
-                int count = 0;
+                List<Mesa> temp = new List<Mesa>();
+
+                for (int i = 0; i < maitre.world.mesas.Count; i++)
+                {
+                    if (maitre.world.mesas[i].estadoActual == Mesa.Estado.Libre)
+                        temp.Add(maitre.world.mesas[i]);
+                }
+                if (temp.Count > 0 )
+                {
+                    int index = Random.Range(0, temp.Count);
+                    maitre.currentTask.Emisor.Notify(new Task("Sentarse", temp[index].gameObject, maitre, Task.Receptor.Cliente));
+                    maitre.CalculateNavPos(temp[index].gameObject.transform.position);
+                    temp[index].ChangeState(Mesa.Estado.Seleccionada);
+                    maitre.mesa = temp[index].gameObject;
+                    maitre.world.mesasDisponibles--;
+                    animator.SetTrigger("Acompañar");
+                }
+
+                    //
+                    /*int count = 0;
                 while (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual != Mesa.Estado.Libre)
                     count++;
                 if (count < maitre.world.mesas.Count && maitre.world.mesas[count].estadoActual == Mesa.Estado.Libre)
@@ -45,7 +83,7 @@ public class Recibir : StateMachineBehaviour {
                     maitre.mesa = maitre.world.mesas[count].gameObject;
                     maitre.world.mesasDisponibles--;
                     animator.SetTrigger("Acompañar");
-                }
+                }*/
             }
             maitre.Completed();
         }

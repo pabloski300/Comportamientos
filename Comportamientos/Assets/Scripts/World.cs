@@ -37,6 +37,19 @@ public class World : MonoBehaviour {
 
         soundManager.Play("AmbienteCiudad");
         soundManager.Play("AmbienteGente");
+        
+
+        camareros.AddRange(FindObjectsOfType<WaiterAgent>());
+        cocineros.AddRange(FindObjectsOfType<CookerAgent>());
+        maitre.AddRange(FindObjectsOfType<MaitreAgent>());
+        limpieza.AddRange(FindObjectsOfType<CleanerAgent>());
+        mesas.AddRange(FindObjectsOfType<Mesa>());
+        barraPedidos.AddRange(FindObjectsOfType<CheckPoint>());
+        barraComida.AddRange(FindObjectsOfType<Encimera>());
+        foreach (GameObject g in GameObject.FindGameObjectsWithTag("Calle"))
+            calle.Add(g.transform);
+        cola.AddRange(FindObjectsOfType<QeuePoint>());
+        cola.Sort((s1, s2) => s1.puesto.CompareTo(s2.puesto));
         mesasDisponibles = mesas.Count;
     }
 

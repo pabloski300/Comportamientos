@@ -7,4 +7,5 @@ using Assets.Scripts;
 public class QeuePoint : MonoBehaviour {
     public bool ocupado = false;
     public ClientAgent cliente;
+    public int puesto;
 }

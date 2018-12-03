@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44706243, g: 0.49696344, b: 0.5750926, a: 1}
+  m_IndirectSpecularColor: {r: 0.44706202, g: 0.49696285, b: 0.57509214, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4317,6 +4317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ocupado: 0
   cliente: {fileID: 0}
+  puesto: 4
 --- !u!1 &416508972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,6 +4911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ocupado: 0
   cliente: {fileID: 0}
+  puesto: 1
 --- !u!1001 &518687417
 Prefab:
   m_ObjectHideFlags: 0
@@ -9743,7 +9745,7 @@ GameObject:
   - component: {fileID: 1104283595}
   m_Layer: 16
   m_Name: Punto 1
-  m_TagString: Untagged
+  m_TagString: Calle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11977,17 +11979,17 @@ Prefab:
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: cola.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: mesas.Array.size
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: calle.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
@@ -11997,22 +11999,22 @@ Prefab:
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: maitre.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: limpieza.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: cocineros.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: camareros.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
@@ -12022,7 +12024,7 @@ Prefab:
     - target: {fileID: 114066878427001708, guid: e7a946de2054b5d4c9f752d3d544341f,
         type: 2}
       propertyPath: barraPedidos.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4608995781166950, guid: e7a946de2054b5d4c9f752d3d544341f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -14310,7 +14312,7 @@ GameObject:
   - component: {fileID: 1517423367}
   m_Layer: 16
   m_Name: Punto 3
-  m_TagString: Untagged
+  m_TagString: Calle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14443,7 +14445,7 @@ GameObject:
   - component: {fileID: 1537504845}
   m_Layer: 16
   m_Name: Punto 4
-  m_TagString: Untagged
+  m_TagString: Calle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14537,7 +14539,7 @@ GameObject:
   - component: {fileID: 1554653769}
   m_Layer: 16
   m_Name: Punto 2
-  m_TagString: Untagged
+  m_TagString: Calle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15253,7 +15255,7 @@ GameObject:
   - component: {fileID: 1614785373}
   m_Layer: 16
   m_Name: Punto 5
-  m_TagString: Untagged
+  m_TagString: Calle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16782,6 +16784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ocupado: 0
   cliente: {fileID: 0}
+  puesto: 3
 --- !u!4 &1788855681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4070597903798286, guid: 8a0eaecd642cc1e41943bc6cc3ba6da1,
@@ -18376,6 +18379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ocupado: 0
   cliente: {fileID: 0}
+  puesto: 0
 --- !u!1001 &1945479881
 Prefab:
   m_ObjectHideFlags: 0
@@ -19626,6 +19630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ocupado: 0
   cliente: {fileID: 0}
+  puesto: 2
 --- !u!1 &2041159941
 GameObject:
   m_ObjectHideFlags: 0

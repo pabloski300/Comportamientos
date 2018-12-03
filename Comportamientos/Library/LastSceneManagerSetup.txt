@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Map_1.unity
+- path: Assets/CP1819_Grupo2_Proyecto/Scenes/Map_1.unity
   isLoaded: 1
   isActive: 1

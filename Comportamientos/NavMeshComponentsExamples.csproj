@@ -61,20 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\AgentLinkMover.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\ClickToMove.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\DestroyOnTrigger.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\DungeonManager.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\EnableIffSleeping.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\FreeCam.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\LocalNavMeshBuilder.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\MeshTool.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\NavMeshPrefabInstance.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\NavMeshSourceTag.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\Oscillator.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\RandomInstancing.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\RandomWalk.cs" />
-    <Compile Include="Assets\NavMeshComponents\Examples\Scripts\SpawnPrefabOnKeyDown.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\AgentLinkMover.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\ClickToMove.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\DestroyOnTrigger.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\DungeonManager.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\EnableIffSleeping.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\FreeCam.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\LocalNavMeshBuilder.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\MeshTool.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\NavMeshPrefabInstance.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\NavMeshSourceTag.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\Oscillator.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\RandomInstancing.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\RandomWalk.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Examples\Scripts\SpawnPrefabOnKeyDown.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>

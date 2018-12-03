@@ -61,11 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NavMeshComponents\Tests\NavMeshSurfaceAgentTests.cs" />
-    <Compile Include="Assets\NavMeshComponents\Tests\NavMeshSurfaceLinkTests.cs" />
-    <Compile Include="Assets\NavMeshComponents\Tests\NavMeshSurfaceModifierTests.cs" />
-    <Compile Include="Assets\NavMeshComponents\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
-    <Compile Include="Assets\NavMeshComponents\Tests\NavMeshSurfaceTests.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Tests\NavMeshSurfaceAgentTests.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Tests\NavMeshSurfaceLinkTests.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Tests\NavMeshSurfaceModifierTests.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
+    <Compile Include="Assets\CP1819_Grupo2_Proyecto\NavMeshComponents\Tests\NavMeshSurfaceTests.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
